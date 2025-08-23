@@ -1,0 +1,30 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+li {
+    list-style: none;
+}
+
+.hiragana-main-layout {
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: min-content;
+}
+
+.gyou {
+    font-size: 24px;
+
+    &:nth-child(1) { order: 10; }
+    &:nth-child(2) { order: 9; }
+    &:nth-child(3) { order: 8; }
+    &:nth-child(4) { order: 7; }
+    &:nth-child(5) { order: 6; }
+    &:nth-child(6) { order: 5; }
+    &:nth-child(7) { order: 4; }
+    &:nth-child(8) { order: 3; }
+    &:nth-child(9) { order: 2; }
+    &:nth-child(10) { order: 1; }
+}
