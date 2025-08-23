@@ -11,7 +11,6 @@ li {
 .site-container {
     max-width: min(100% - 3.5rem, 1024px);
     margin-inline: auto;
-    border: 1px solid #000;
 }
 
 .hiragana-main-layout {
@@ -20,8 +19,14 @@ li {
     grid-auto-columns: min-content;
 }
 
+.fixed-mobile-only {
+    position: fixed;
+    bottom: 1rem;
+    left: 1rem;
+}
+
 .gyou {
-    font-size: 24px;
+    font-size: 20px;
 
     &:nth-child(1) { order: 10; }
     &:nth-child(2) { order: 9; }
