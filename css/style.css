@@ -8,6 +8,12 @@ li {
     list-style: none;
 }
 
+.site-container {
+    max-width: min(100% - 3.5rem, 1024px);
+    margin-inline: auto;
+    border: 1px solid #000;
+}
+
 .hiragana-main-layout {
     display: grid;
     grid-auto-flow: column;
