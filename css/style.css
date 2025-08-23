@@ -19,6 +19,7 @@ li {
     margin-inline: auto;
 }
 
+/* 多分モバイル用スタイルに切り分けた方がいいかも */
 header {
     height: 100vh;
     height: 100dvh;
@@ -61,4 +62,22 @@ h1 {
     &:nth-child(8) { order: 3; }
     &:nth-child(9) { order: 2; }
     &:nth-child(10) { order: 1; }
+}
+
+
+main {
+    margin-top: 3rem;
+
+    > * + * {
+        margin-top: 1.5rem;
+    }
+}
+
+article {
+    display: grid;
+    border: 1px solid #000;
+
+    > * + * {
+        margin-top: 0.5rem;
+    }
 }
