@@ -1,0 +1,196 @@
+:root {
+  /* color */
+  --black: #333;
+
+  /* space */
+  --padding-sm: clamp(1rem, 3%, 1.5rem);
+  --padding-md: clamp(1.5rem, 6%, 3rem);
+  --padding-lg: clamp(3rem, 12%, 6rem);
+
+  --mt-4: 0.25rem;
+  --mt-8: 0.5rem;
+  --mt-12: 0.75rem;
+  --mt-16: 1rem;
+  --mt-20: 1.25rem;
+  --mt-24: 1.5rem;
+  --mt-32: 2rem;
+  --mt-40: 2.5rem;
+
+  --gap-sm: clamp(1rem, 3vmax, 1.5rem);
+  --gap-md: clamp(1.5rem, 6vmax, 3rem);
+  --gap-lg: clamp(3rem, 8vmax, 4rem);
+}
+
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+
+  /* font-size */
+  --clamp-root-font-size: 16;
+  --clamp-slope: calc(
+    (var(--clamp-max) - var(--clamp-min)) /
+      (var(--clamp-viewport-max) - var(--clamp-viewport-min))
+  );
+  --clamp-y-axis-intersection: calc(
+    var(--clamp-min) - (var(--clamp-slope) * var(--clamp-viewport-min))
+  );
+  --clamp-preffered-value: calc(
+    var(--clamp-y-axis-intersection) * (1rem / var(--clamp-root-font-size)) +
+      (var(--clamp-slope) * 100vi)
+  );
+  --clamp: clamp(
+    calc(var(--clamp-min) * (1rem / var(--clamp-root-font-size))),
+    var(--clamp-preffered-value),
+    calc(var(--clamp-max) * (1rem / var(--clamp-root-font-size)))
+  );
+
+  font-size: var(--clamp);
+}
+
+body {
+  font-family: "Noto Sans JP", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+
+  --clamp-viewport-min: 375;
+  --clamp-viewport-max: 1200;
+  --clamp-min: 15;
+  --clamp-max: 17;
+
+  color: var(--black);
+}
+
+li {
+  list-style: none;
+}
+
+p {
+  line-height: 1.6;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+.relative {
+  position: relative;
+}
+
+.main-grid {
+  --gap: clamp(1rem, 6vw, 3rem);
+  --full: minmax(var(--gap), 1fr);
+  --content: min(1200px, 100% - var(--gap) * 2);
+  --popout: minmax(0, 5rem);
+
+  display: grid;
+  grid-template-columns:
+    [full-start] var(--full)
+    [popout-start] var(--popout)
+    [content-start] var(--content) [content-end]
+    var(--popout) [popout-end]
+    var(--full) [full-end];
+}
+
+.full {
+  grid-column: full;
+}
+.content {
+  grid-column: content;
+}
+.popout {
+  grid-column: popout;
+}
+
+.stack-grid {
+  display: grid;
+  grid-template-areas: "stack";
+
+  > * {
+    grid-area: stack;
+  }
+}
+
+/* develop */
+:is(.content, .full, .popout):not(.now) {
+  display: none;
+}
+
+/* decorative */
+.decorative {
+  position: absolute;
+  z-index: -1;
+  color: #ddd;
+}
+
+.char-a {
+  --clamp-min: 150;
+  --clamp-max: 300;
+  right: 0px;
+  bottom: 0;
+  rotate: 20deg;
+}
+.text-a {
+  --clamp-min: 40;
+  --clamp-max: 80;
+  font-size: clamp(40px, 5vw, 80px);
+  top: 1.5rem;
+  left: 1rem;
+  rotate: -30deg;
+}
+
+.text-i {
+  --clamp-min: 40;
+  --clamp-max: 80;
+}
+.char-i {
+  --clamp-min: 100;
+  --clamp-max: 200;
+  bottom: 0;
+  right: 2rem;
+}
+
+.char-e {
+  --clamp-min: 90;
+  --clamp-max: 180;
+}
+
+.char-ka {
+  --clamp-min: 90;
+  --clamp-max: 180;
+  justify-self: end;
+  rotate: 20deg;
+}
+.text-ka {
+  --clamp-min: 30;
+  --clamp-max: 60;
+  justify-self: start;
+  rotate: -20deg;
+  translate: 10% 100%;
+}
+
+.char-ki {
+  --clamp-min: 60;
+  --clamp-max: 120;
+  color: pink;
+
+  place-self: end;
+}
+
+.text-kiwi {
+  --clamp-min: 30;
+  --clamp-max: 60;
+  color: pink;
+  writing-mode: vertical-rl;
+  place-self: end start;
+  bottom: 1rem;
+  left: 1rem;
+}
+
+article {
+  overflow: hidden;
+  isolation: isolate;
+}

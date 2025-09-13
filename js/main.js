@@ -1,5 +1,3 @@
-
-const chars = document.querySelectorAll(".gyou > li")
-
-
-
+window.addEventListener("click", (e) => {
+  alert(window.innerWidth);
+});
