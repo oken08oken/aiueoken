@@ -374,8 +374,8 @@ article[data-content="o"] {
   }
 
   & .text-o {
-    right: 1rem;
-    top: 1rem;
+    justify-self: end;
+    margin-top: 1rem;
   }
 }
 
@@ -394,7 +394,7 @@ article[data-content="o"] {
 
   & .item {
     container-type: inline-size;
-    background: #eee;
+    background: #ddd;
   }
 
   & .item-content {
