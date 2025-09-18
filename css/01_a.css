@@ -411,6 +411,7 @@ article[data-content="o"] {
 
   & iframe {
     aspect-ratio: 16 / 9;
+    width: 100%;
     display: block;
   }
 }
