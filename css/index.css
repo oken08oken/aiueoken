@@ -1,0 +1,153 @@
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --size-sm: clamp(0.8rem, 0.09cqi + 0.78rem, 0.84rem);
+  --size-base: clamp(1rem, 0.24cqi + 0.94rem, 1.13rem);
+  --size-md: clamp(1.25rem, 0.48cqi + 1.14rem, 1.5rem);
+  --size-lg: clamp(1.56rem, 0.85cqi + 1.36rem, 2rem);
+  --size-xl: clamp(1.95rem, 1.38cqi + 1.63rem, 2.66rem);
+  --size-xxl: clamp(2.44rem, 2.15cqi + 1.94rem, 3.55rem);
+  --size-xxxl: clamp(3.05rem, 3.26cqi + 2.29rem, 4.73rem);
+}
+
+h2 {
+  font-size: var(--size-xxl);
+}
+h3 {
+  font-size: var(--size-lg);
+}
+h4 {
+  font-size: var(--size-md);
+}
+p {
+  font-size: var(--size-base);
+}
+li {
+  font-size: var(--size-base);
+}
+a {
+  font-size: var(--size-base);
+}
+
+body {
+  font-family: "Roboto", "Noto Sans JP", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  color: #333;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  color: inherit;
+}
+
+.main-grid {
+  --gap: clamp(1rem, 6vw, 3rem);
+  --full: minmax(var(--gap), 1fr);
+  --content: min(1200px, 100% - var(--gap) * 2);
+
+  display: grid;
+  grid-template-columns:
+    [full-start] var(--full)
+    [content-start] var(--content) [content-end]
+    var(--full) [full-end];
+}
+
+.content {
+  grid-column: content;
+}
+
+.full {
+  grid-column: full;
+}
+
+.stack {
+  display: grid;
+  grid-template-areas: "stack";
+
+  > * {
+    grid-area: stack;
+  }
+}
+
+.center {
+  display: grid;
+  place-items: center;
+}
+
+.col-grid {
+  --min: 20ch;
+  --gap: 1rem;
+
+  display: grid;
+  grid-gap: var(--gap);
+  /* min() with 100% prevents overflow
+    in extra narrow spaces */
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, var(--min)), 1fr));
+}
+
+.col-flex {
+  --min: 10ch;
+  --gap: 1rem;
+
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--gap);
+}
+
+.col-flex > * {
+  flex: 1 1 var(--min);
+}
+
+.relative {
+  position: relative;
+}
+
+.decorative {
+  position: absolute;
+  z-index: -1;
+  color: #ddd;
+}
+
+.none {
+  display: none;
+}
+
+p {
+  line-height: 1.65;
+}
+
+.site-width {
+  position: fixed;
+  top: 0;
+  right: 0;
+  font-size: 50px;
+}
+
+.size-1 {
+  font-size: clamp(25px, 15cqi, 50px);
+}
+.size-2 {
+  font-size: clamp(50px, 18cqi, 100px);
+}
+.size-3 {
+  font-size: clamp(75px, 21cqi, 150px);
+}
+.size-4 {
+  font-size: clamp(100px, 24cqi, 200px);
+}
+.size-5 {
+  font-size: clamp(125px, 27cqi, 250px);
+}
+.size-6 {
+  font-size: clamp(150px, 30cqi, 300px);
+}
