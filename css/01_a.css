@@ -234,12 +234,14 @@ article[data-content="u"] {
     & > :nth-child(2) {
       font-size: 55px;
       color: tomato;
+      margin-top: -1rem;
     }
 
     & > div {
       display: flex;
       justify-content: space-between;
       align-items: center;
+      margin-top: -1.5rem;
 
       & > :nth-child(1) {
         font-size: 36px;
@@ -275,8 +277,12 @@ article[data-content="u"] {
       color: white;
       width: fit-content;
       font-size: var(--size-md);
+      margin-top: 2.5rem;
+      rotate: -10deg;
 
-      margin-top: 2rem;
+      @media (850px < width) {
+        margin-top: 0;
+      }
     }
   }
 
@@ -291,6 +297,10 @@ article[data-content="u"] {
     bottom: 1rem;
     right: 1rem;
     rotate: 30deg;
+  }
+
+  .text-u {
+    bottom: 2rem;
   }
 }
 
@@ -336,5 +346,71 @@ article[data-content="e"] {
     & li {
       text-align: center;
     }
+  }
+}
+
+/* お */
+article[data-content="o"] {
+  padding-block: 5rem;
+  padding-inline: 1rem;
+
+  & h2 {
+    font-size: var(--size-lg);
+
+    & span {
+      display: inline-block;
+    }
+
+    & > :nth-child(1) {
+      font-size: var(--size-xl);
+      background: #ddd;
+      padding: 0.25em;
+    }
+  }
+
+  & p {
+    margin-top: 2rem;
+    max-width: 64ch;
+  }
+
+  & .text-o {
+    right: 1rem;
+    top: 1rem;
+  }
+}
+
+.opening-items {
+  margin-top: 2rem;
+  display: grid;
+  gap: 1rem;
+
+  @media (640px < width) {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  @media (900px < width) {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  & .item {
+    container-type: inline-size;
+    background: #eee;
+  }
+
+  & .item-content {
+    padding-block: 2rem;
+    padding-inline: 1.5rem;
+  }
+
+  .slide {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    background: red;
+    display: none;
+  }
+
+  & iframe {
+    aspect-ratio: 16 / 9;
+    display: block;
   }
 }

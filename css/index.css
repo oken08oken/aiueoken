@@ -112,6 +112,10 @@ a {
   position: relative;
 }
 
+.hidden {
+  overflow: hidden;
+}
+
 .decorative {
   position: absolute;
   z-index: -1;
