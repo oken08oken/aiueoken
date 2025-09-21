@@ -116,7 +116,7 @@ img {
 
 /* develop */
 :is(.content, .full, .popout):not(.now) {
-  display: none;
+  /* display: none; */
 }
 
 /* decorative */

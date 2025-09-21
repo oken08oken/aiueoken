@@ -1,6 +1,6 @@
 /* あ */
 article[data-content="a"] {
-  container-type: inline-size;
+  /* container-type: inline-size; */
 }
 
 .anime-info {
@@ -209,7 +209,7 @@ article[data-content="i"] {
 
 /* う */
 article[data-content="u"] {
-  container-type: inline-size;
+  /* container-type: inline-size; */
 
   padding-inline: 2rem;
   padding-block: 3rem;
@@ -377,10 +377,20 @@ article[data-content="o"] {
     justify-self: end;
     margin-top: 1rem;
   }
+
+  & .char-o {
+    top: 1rem;
+    right: 1rem;
+    font-weight: bold;
+  }
+
+  & h3 {
+    margin-top: 3rem;
+  }
 }
 
 .opening-items {
-  margin-top: 2rem;
+  margin-top: 1rem;
   display: grid;
   gap: 1rem;
 

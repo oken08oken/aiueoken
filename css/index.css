@@ -155,3 +155,7 @@ p {
 .size-6 {
   font-size: clamp(150px, 30cqi, 300px);
 }
+
+article {
+  container-type: inline-size;
+}
