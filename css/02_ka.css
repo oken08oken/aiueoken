@@ -7,6 +7,7 @@ article[data-content="ka"] {
     display: grid;
     place-self: center;
     writing-mode: vertical-rl;
+    color: red;
   }
 
   .text {
