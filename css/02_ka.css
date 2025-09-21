@@ -4,12 +4,14 @@ article[data-content="ka"] {
   padding-inline: 1rem;
 
   h2 {
+    text-align: center;
     place-self: center;
     writing-mode: vertical-rl;
   }
 
   .text {
     max-width: 60ch;
+    margin-top: 3rem;
   }
 
   .text-ka {
@@ -39,6 +41,10 @@ article[data-content="ka"] {
       grid-row: 1;
     }
 
+    .text {
+      margin-top: 0;
+    }
+
     .text-ka {
       writing-mode: revert;
     }
@@ -48,10 +54,11 @@ article[data-content="ka"] {
 .cafe-text-items {
   padding: 2rem 3rem;
   border-radius: 24px;
-  outline: 4px double;
+  outline: 2px dashed;
   outline-offset: -1rem;
   background: #eee;
   place-self: center;
+  margin-top: 3rem;
 
   > * + * {
     margin-block-start: 2rem;
@@ -59,6 +66,7 @@ article[data-content="ka"] {
 
   @media (540px < width) {
     writing-mode: vertical-rl;
+    margin-top: 0;
   }
 }
 
