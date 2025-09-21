@@ -374,7 +374,7 @@ article[data-content="o"] {
   }
 
   & .text-o {
-    justify-self: end;
+    text-align: end;
     margin-top: 1rem;
   }
 
