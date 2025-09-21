@@ -4,10 +4,8 @@ article[data-content="ka"] {
   padding-inline: 1rem;
 
   h2 {
-    display: grid;
-    place-self: center;
     writing-mode: vertical-rl;
-    color: red;
+    color: blue;
   }
 
   .text {
