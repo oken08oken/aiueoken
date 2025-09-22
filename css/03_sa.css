@@ -77,7 +77,56 @@ article[data-content="si"] {
 /* す */
 article[data-content="su"] {
   padding-block: 3rem;
-  border: 1px solid #000;
+  padding-inline: clamp(1rem, 5cqi, 3rem);
+
+  ul {
+    margin-block-start: 2rem;
+  }
+
+  li {
+    --border-color: #333;
+
+    display: grid;
+    padding: 2.5rem 1.5rem;
+    border-top: 1px solid var(--border-color);
+
+    &:last-child {
+      border-bottom: 1px solid var(--border-color);
+    }
+  }
+
+  h3 {
+    display: grid;
+    place-items: center;
+  }
+  p {
+    margin-block-start: 1rem;
+  }
+
+  @media (600px < width) {
+    li {
+      grid-template-columns: 1fr 2fr;
+    }
+
+    p {
+      margin-block-start: 0;
+    }
+  }
+
+  > :nth-child(3) {
+    display: grid;
+    grid-auto-flow: column;
+  }
+
+  .char-su {
+    width: fit-content;
+    margin-inline-start: auto;
+  }
+  .text-su {
+    color: #eee;
+    display: grid;
+    align-items: end;
+  }
 }
 
 /* せ */
