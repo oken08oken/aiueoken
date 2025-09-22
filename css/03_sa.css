@@ -11,8 +11,6 @@ article[data-content="sa"] {
     gap: 1rem;
   }
 
-  display: none;
-
   h2 {
     span {
       text-decoration: wavy underline blue;
@@ -39,8 +37,6 @@ article[data-content="sa"] {
 article[data-content="si"] {
   padding-block: 3rem;
   padding-inline: 2rem;
-
-  display: none;
 
   .char-si {
     right: 2rem;
@@ -78,6 +74,12 @@ article[data-content="si"] {
   }
 }
 
+/* す */
+article[data-content="su"] {
+  padding-block: 3rem;
+  border: 1px solid #000;
+}
+
 /* せ */
 article[data-content="se"] {
   padding-block-start: 4rem;
@@ -85,8 +87,6 @@ article[data-content="se"] {
   padding-inline: clamp(1rem, 4cqi, 2rem);
   overflow: hidden;
   border: 3px solid lightgreen;
-
-  display: none;
 
   .title-wrap {
     max-width: 800px;
