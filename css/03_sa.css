@@ -11,6 +11,8 @@ article[data-content="sa"] {
     gap: 1rem;
   }
 
+  display: none;
+
   h2 {
     span {
       text-decoration: wavy underline blue;
@@ -37,6 +39,8 @@ article[data-content="sa"] {
 article[data-content="si"] {
   padding-block: 3rem;
   padding-inline: 2rem;
+
+  display: none;
 
   .char-si {
     right: 2rem;
@@ -80,7 +84,9 @@ article[data-content="se"] {
   padding-block-end: 12rem;
   padding-inline: clamp(1rem, 4cqi, 2rem);
   overflow: hidden;
-  border: 2px dotted #000;
+  border: 3px solid lightgreen;
+
+  display: none;
 
   .title-wrap {
     max-width: 800px;
@@ -167,5 +173,103 @@ article[data-content="se"] {
     font-weight: bold;
     rotate: 15deg;
     font-size: clamp(30px, 15cqi, 100px);
+  }
+}
+
+/* そ */
+article[data-content="so"] {
+  padding-inline: clamp(1rem, 5cqi, 3rem);
+  padding-block: 3rem;
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+
+  --box-block-space: 2rem;
+
+  > :nth-child(2) {
+    width: fit-content;
+    margin-inline: auto;
+    margin-block-start: 5rem;
+  }
+
+  h2 {
+    &:nth-of-type(2) {
+      margin-inline-start: auto;
+      width: fit-content;
+      margin-block-start: var(--box-block-space);
+    }
+  }
+
+  p {
+    margin-block-start: 1rem;
+    max-width: 60ch;
+  }
+
+  .box {
+    max-width: 700px;
+    margin-inline: auto;
+    background: #aaa;
+    margin-block-start: var(--box-block-space);
+  }
+
+  iframe {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    display: block;
+  }
+
+  .circle {
+    border-radius: 50%;
+    aspect-ratio: 1 / 1;
+    position: absolute;
+    z-index: -1;
+  }
+
+  .circle-1 {
+    width: min(70vw, 650px);
+    left: 0;
+    top: 0;
+    translate: -35% -35%;
+    background: yellow;
+  }
+
+  .circle-2 {
+    width: min(50vw, 480px);
+    right: 0;
+    bottom: 0;
+    translate: 40% 40%;
+    background: greenyellow;
+  }
+
+  .circle-3 {
+    width: min(20vw, 300px);
+    translate: 40% 40%;
+    background: yellow;
+    left: 10%;
+    bottom: 30%;
+  }
+
+  .circle-4 {
+    width: min(15vw, 190px);
+    translate: 40% 40%;
+    background: greenyellow;
+    bottom: 12%;
+    right: 34%;
+  }
+
+  .char-hi {
+    color: lawngreen;
+    width: fit-content;
+    margin-inline-start: auto;
+    margin-inline-end: 5rem;
+    rotate: 15deg;
+  }
+
+  .ena {
+    font-size: var(--size-xxxl);
+  }
+
+  .niki {
+    font-size: var(--size-xxl);
   }
 }
