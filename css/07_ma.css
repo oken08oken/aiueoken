@@ -1,0 +1,45 @@
+section[data-gyo="MA"] > .content {
+  border: 1px solid #000;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: clamp(1rem, 5cqi, 3rem);
+
+  .main-char {
+    font-size: 80px;
+    user-select: none;
+  }
+
+  .motion {
+    aspect-ratio: 2 / 1;
+  }
+
+  article {
+    display: grid;
+    border: 1px solid #000;
+  }
+}
+
+article[data-content="ma"] {
+  grid-column: span 2;
+  border: 1px solid #000;
+}
+
+article[data-content="mi"] {
+  grid-column: span 2;
+  border: 1px solid #000;
+}
+
+article[data-content="mu"] {
+  grid-column: 2 / span 2;
+  border: 1px solid #000;
+}
+
+article[data-content="me"] {
+  grid-column: span 2;
+  border: 1px solid #000;
+}
+
+article[data-content="mo"] {
+  grid-column: span 2;
+  border: 1px solid #000;
+}

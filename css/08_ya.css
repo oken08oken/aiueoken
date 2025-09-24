@@ -1,0 +1,37 @@
+section[data-gyo="YA"] > .full {
+  padding-block: 4rem;
+  background: #ccc;
+
+  --min: 340px;
+  --gap: 1rem;
+  justify-content: center;
+
+  article {
+    background: #eee;
+    aspect-ratio: 1 / 1;
+    border-radius: 50%;
+    max-width: var(--min);
+    display: grid;
+    gap: 1rem;
+    position: relative;
+    overflow: hidden;
+    isolation: isolate;
+
+    > * {
+      rotate: 20deg;
+    }
+  }
+
+  .char {
+    place-self: center;
+  }
+
+  h2 {
+    font-size: var(--size-lg);
+    place-self: end center;
+  }
+
+  p {
+    place-self: start center;
+  }
+}

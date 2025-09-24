@@ -1,0 +1,53 @@
+section[data-gyo="RA"] > .content {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+
+  @media (500px < width) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  @media (700px < width) {
+    grid-template-columns: repeat(5, 1fr);
+  }
+
+  article {
+    background: yellow;
+    padding-block: 1rem;
+    padding-inline: 1rem;
+    overflow: hidden;
+    position: relative;
+    isolation: isolate;
+
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+
+    > * {
+      writing-mode: vertical-rl;
+    }
+  }
+
+  .char {
+    top: 0;
+    right: 0;
+    translate: 30% -20%;
+    rotate: 12deg;
+  }
+
+  .anime-enter {
+    animation: clip 0.2s forwards ease-out;
+  }
+
+  .anime-leave {
+    animation: clip-back 0.2s forwards ease-out;
+  }
+
+  h2 {
+    font-size: var(--size-lg);
+    place-self: center;
+  }
+  p {
+    max-inline-size: 48ch;
+    place-self: center;
+  }
+}

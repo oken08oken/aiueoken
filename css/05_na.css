@@ -8,6 +8,7 @@ section[data-gyo="NA"] .layout {
 
   .main-char {
     font-size: min(50vw, 350px);
+    font-weight: bold;
     user-select: none;
     position: absolute;
     top: 50%;
@@ -145,7 +146,5 @@ article[data-content="no"] {
 
   a {
     font-size: var(--size-lg);
-    text-align: center;
-    display: block;
   }
 }
