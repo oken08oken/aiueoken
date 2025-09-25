@@ -1,45 +1,125 @@
 section[data-gyo="MA"] > .content {
-  border: 1px solid #000;
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: clamp(1rem, 5cqi, 3rem);
+  article {
+    max-width: 800px;
+    margin-inline: auto;
+    padding-block: 2rem;
+  }
 
   .main-char {
-    font-size: 80px;
+    font-size: 180px;
     user-select: none;
+    color: #eee;
   }
 
-  .motion {
-    aspect-ratio: 2 / 1;
-  }
-
-  article {
-    display: grid;
-    border: 1px solid #000;
+  h2 {
+    font-size: var(--size-xl);
   }
 }
 
 article[data-content="ma"] {
-  grid-column: span 2;
-  border: 1px solid #000;
+  .learn {
+    --min: auto;
+
+    li {
+      font-size: var(--size-md);
+      background: white;
+      text-align: center;
+      padding: 0.25em;
+      background: #ddd;
+    }
+  }
 }
 
 article[data-content="mi"] {
-  grid-column: span 2;
-  border: 1px solid #000;
+  .mi-title-content {
+    text-align: center;
+  }
+
+  .right-handed {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    > * {
+      font-size: var(--size-xxl);
+      text-align: center;
+      color: #ddd;
+    }
+  }
+
+  p {
+    margin-block-start: 1rem;
+  }
 }
 
 article[data-content="mu"] {
-  grid-column: 2 / span 2;
-  border: 1px solid #000;
+  padding: 3rem;
+
+  p {
+    font-size: var(--size-lg);
+
+    &:nth-of-type(1) {
+      place-self: start start;
+    }
+    &:nth-of-type(2) {
+      place-self: start end;
+    }
+    &:nth-of-type(3) {
+      place-self: end start;
+    }
+    &:nth-of-type(4) {
+      place-self: end end;
+    }
+  }
 }
 
 article[data-content="me"] {
-  grid-column: span 2;
-  border: 1px solid #000;
+  h3 {
+    font-size: var(--size-md);
+  }
+
+  .item {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    margin-block-start: 2rem;
+  }
+
+  .item-layout {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    h3 {
+      grid-column: 1 / -1;
+      text-align: center;
+    }
+
+    p {
+      font-size: var(--size-xl);
+      text-align: center;
+    }
+
+    .ragan {
+      filter: blur(4px);
+    }
+  }
+
+  .last-text {
+    width: fit-content;
+    margin-inline: auto;
+    margin-block-start: 3rem;
+    color: purple;
+  }
 }
 
 article[data-content="mo"] {
-  grid-column: span 2;
-  border: 1px solid #000;
+  p {
+    margin-block-start: 1rem;
+    text-align: center;
+  }
 }
+
+/* .test {
+  background: orange;
+  height: 100vh;
+  margin-bottom: 100px;
+} */
