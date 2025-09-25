@@ -16,16 +16,12 @@ section[data-gyo="RA"] > .content {
     padding-block: 1rem;
     padding-inline: 1rem;
     overflow: hidden;
-    background: plum;
+    background: gold;
     position: relative;
     isolation: isolate;
 
     display: grid;
     grid-template-rows: 1fr 1fr;
-
-    > * {
-      /* writing-mode: vertical-rl; */
-    }
   }
 
   .char {
@@ -46,6 +42,7 @@ section[data-gyo="RA"] > .content {
   h2 {
     font-size: var(--size-lg);
     place-self: center;
+    writing-mode: vertical-rl;
   }
   p {
     max-inline-size: 48ch;
