@@ -15,7 +15,7 @@ section[data-gyo="RA"] > .content {
     background: yellow;
     padding-block: 1rem;
     padding-inline: 1rem;
-    overflow: hidden;
+    /* overflow: hidden; */
     position: relative;
     isolation: isolate;
 
