@@ -15,13 +15,13 @@ section[data-gyo="RA"] > .content {
     background: yellow;
     padding-block: 1rem;
     padding-inline: 1rem;
-    /* overflow: hidden; */
-    background: orange;
+    overflow: hidden;
+    background: pink;
     position: relative;
     isolation: isolate;
 
     display: grid;
-    grid-template-rows: 1fr 1fr;
+    /* grid-template-rows: 1fr 1fr; */
 
     > * {
       writing-mode: vertical-rl;
