@@ -16,12 +16,13 @@ section[data-gyo="RA"] > .content {
     padding-block: 1rem;
     padding-inline: 1rem;
     overflow: hidden;
-    background: gold;
+    background: palevioletred;
     position: relative;
     isolation: isolate;
 
     display: grid;
     grid-template-rows: 1fr 1fr;
+    grid-template-rows: 400px 400px;
   }
 
   .char {
