@@ -16,7 +16,7 @@ section[data-gyo="RA"] > .content {
     padding-block: 1rem;
     padding-inline: 1rem;
     overflow: hidden;
-    background: pink;
+    background: aqua;
     position: relative;
     isolation: isolate;
 
@@ -24,7 +24,7 @@ section[data-gyo="RA"] > .content {
     /* grid-template-rows: 1fr 1fr; */
 
     > * {
-      writing-mode: vertical-rl;
+      /* writing-mode: vertical-rl; */
     }
   }
 
