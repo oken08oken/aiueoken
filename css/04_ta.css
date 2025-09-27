@@ -7,6 +7,7 @@ section[data-gyo="TA"] > .content {
     "te"
     "to";
   gap: 1rem;
+  padding-block: 3rem;
 
   @media (760px < width) {
     grid-template-columns: repeat(4, 1fr);

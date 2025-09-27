@@ -1,0 +1,175 @@
+/* わ */
+article[data-content="wa"] {
+  border: 1px solid #000;
+  padding-block: 3rem;
+  padding-inline: clamp(1rem, 5cqi, 3rem);
+
+  h2 {
+    font-size: var(--size-xl);
+
+    span {
+      background: red;
+      color: white;
+      display: inline-block;
+      padding: 0.25em;
+    }
+  }
+
+  h3 {
+    margin-block-start: 3rem;
+  }
+
+  .desc {
+    margin-block-start: 1rem;
+    max-width: 72ch;
+  }
+
+  .niku {
+    text-align: center;
+    padding-block: 2rem;
+  }
+  /* HTML: <div class="tooltip">This is a Speech Bubble with a gradient coloration and with border radius </div> */
+  .tooltip {
+    color: #fff;
+    font-size: var(--size-base);
+    max-width: 15ch;
+    text-align: center;
+
+    --bg: orange;
+    rotate: -20deg;
+  }
+  .tooltip {
+    /* triangle dimension */
+    --b: 2em; /* base */
+    --h: 1em; /* height */
+
+    --p: 50%; /* triangle position (0%:left 100%:right) */
+    --r: 1.2em; /* the radius */
+
+    padding: 1em;
+    border-radius: var(--r) var(--r)
+      min(var(--r), 100% - var(--p) - var(--b) / 2)
+      min(var(--r), var(--p) - var(--b) / 2) / var(--r);
+    background: var(--bg);
+    position: relative;
+    z-index: 0;
+  }
+  .tooltip:before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    inset: 0 0 calc(-1 * var(--h));
+    background: var(--bg);
+    clip-path: polygon(
+      min(100%, var(--p) + var(--b) / 2) calc(100% - var(--h)),
+      var(--p) 100%,
+      max(0%, var(--p) - var(--b) / 2) calc(100% - var(--h)),
+      50% 50%
+    );
+  }
+
+  .items {
+    margin-block-start: 4rem;
+    --min: 30ch;
+    column-gap: clamp(1rem, 3cqi, 2rem);
+    row-gap: 2.5rem;
+  }
+
+  .item {
+    p {
+      border: 1px solid #000;
+      margin-block-start: 2.5rem;
+    }
+  }
+
+  .wa-text {
+    bottom: 3rem;
+    right: 3rem;
+    writing-mode: vertical-rl;
+  }
+
+  .wa-char {
+    top: 8rem;
+    right: 3rem;
+    rotate: 20deg;
+  }
+}
+
+/* を */
+article[data-content="wo"] {
+  isolation: isolate;
+  overflow: hidden;
+  padding-block-start: 6rem;
+  padding-block-end: 8rem;
+  padding-inline: clamp(1rem, 5cqi, 3rem);
+  background: #eee;
+
+  h2 {
+    font-size: var(--size-xl);
+    width: fit-content;
+  }
+
+  p {
+    max-width: 64ch;
+    margin-block-start: 1rem;
+  }
+
+  .wo-item {
+    display: grid;
+    place-items: center;
+    rotate: -6deg;
+  }
+
+  .char {
+    user-select: none;
+    z-index: -1;
+    color: #ddd;
+    position: absolute;
+  }
+
+  .char-1 {
+    top: 0;
+    left: 0;
+    rotate: 130deg;
+    translate: -15% -20%;
+  }
+
+  .char-2 {
+    bottom: 0;
+    right: 0;
+    rotate: -50deg;
+    translate: 20% 20%;
+  }
+}
+
+/* ん */
+article[data-content="wn"] {
+  padding-block: 4rem;
+  padding-inline: clamp(1rem, 5cqi, 3rem);
+
+  h2 {
+    font-size: var(--size-lg);
+    span {
+      font-size: var(--size-xxxl);
+    }
+  }
+  .disc {
+    margin-block-start: 4rem;
+    text-align: center;
+  }
+
+  h3 {
+    text-align: end;
+    margin-block-start: 4rem;
+  }
+
+  .thanks {
+    font-size: var(--size-xxl);
+    margin-block-start: 3rem;
+    text-align: center;
+  }
+
+  .char {
+    text-align: center;
+  }
+}

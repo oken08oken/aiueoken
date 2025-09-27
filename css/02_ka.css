@@ -273,6 +273,8 @@ article[data-content="ke"] {
 
 /* こ */
 article[data-content="ko"] {
+  padding-block: 3rem;
+
   .ko-main {
     padding-block: 4rem;
     padding-inline: 1rem;

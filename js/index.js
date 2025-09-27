@@ -5,6 +5,38 @@ window.addEventListener("resize", (e) => {
 
 gsap.registerPlugin(SplitText);
 
+const nav = document.querySelector("nav");
+const navCloseButton = document.querySelector("nav > .nav-close-button");
+const navOpenButton = document.querySelector(".nav-open-button");
+
+navOpenButton.addEventListener("click", (e) => {
+  const target = e.target;
+  gsap.to(navOpenButton, {
+    transformOrigin: "right bottom",
+    scale: 0,
+    ease: "back.out",
+  });
+
+  gsap.to(nav, {
+    scale: 1,
+    transformOrigin: "right bottom",
+    ease: "back.out",
+  });
+});
+
+navCloseButton.addEventListener("click", (e) => {
+  gsap.to(navOpenButton, {
+    scale: 1,
+    ease: "back.out",
+  });
+
+  gsap.to(nav, {
+    scale: 0,
+    transformOrigin: "right bottom",
+    ease: "back.out",
+  });
+});
+
 function split(text) {
   const item = SplitText.create(text, {
     type: "chars",
