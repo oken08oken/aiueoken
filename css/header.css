@@ -58,7 +58,6 @@ nav > .layout {
   z-index: 200;
   display: block;
   font-size: var(--size-xl);
-  writing-mode: vertical-rl;
   width: fit-content;
   aspect-ratio: 1 / 1;
   border-radius: 50%;
