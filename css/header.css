@@ -8,14 +8,18 @@ nav {
   scale: 0;
 
   position: fixed;
-  right: 3rem;
-  bottom: 3rem;
+  inset: 40% 0 0 0;
+
+  @media (600px < width) {
+    inset: revert;
+    right: 3rem;
+    bottom: 3rem;
+    border-radius: 24px;
+  }
+
   z-index: 100;
   background: var(--bg);
   padding: 1rem 2rem;
-  border-radius: 24px;
-
-  transition: scale 0.2;
 
   button {
     width: 100%;
@@ -30,6 +34,7 @@ nav {
     }
   }
 }
+
 nav > .layout {
   display: grid;
   grid-auto-flow: column;

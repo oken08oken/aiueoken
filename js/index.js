@@ -14,26 +14,26 @@ navOpenButton.addEventListener("click", (e) => {
   gsap.to(navOpenButton, {
     transformOrigin: "right bottom",
     scale: 0,
-    ease: "back.out",
+    ease: "expo.out",
   });
 
   gsap.to(nav, {
     scale: 1,
     transformOrigin: "right bottom",
-    ease: "back.out",
+    ease: "expo.out",
   });
 });
 
 navCloseButton.addEventListener("click", (e) => {
   gsap.to(navOpenButton, {
     scale: 1,
-    ease: "back.out",
+    ease: "expo.out",
   });
 
   gsap.to(nav, {
     scale: 0,
     transformOrigin: "right bottom",
-    ease: "back.out",
+    ease: "expo.out",
   });
 });
 
