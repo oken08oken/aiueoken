@@ -129,8 +129,7 @@ article[data-content="su"] {
 
 /* せ */
 article[data-content="se"] {
-  padding-block-start: 4rem;
-  padding-block-end: 12rem;
+  padding-block: 4rem;
   padding-inline: var(--padding-inline);
   overflow: hidden;
 

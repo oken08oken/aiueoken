@@ -144,6 +144,9 @@ article[data-content="i"] {
 
 .iwate-item1 {
   container: iwate-item1 / inline-size;
+  overflow: hidden;
+  background: #eee;
+  isolation: isolate;
 
   & p {
     margin-top: 2rem;
