@@ -1,9 +1,34 @@
+gsap.registerPlugin(SplitText, ScrollTrigger);
+
 const siteWidth = document.querySelector(".site-width");
 window.addEventListener("resize", (e) => {
   siteWidth.textContent = window.innerWidth;
 });
 
-gsap.registerPlugin(SplitText);
+// アニメ
+gsap.from(".anime-titles li", {
+  clipPath: "inset(0 100% 0 0)",
+  stagger: {
+    amount: 0.4,
+  },
+  scrollTrigger: {
+    trigger: ".anime-titles",
+  },
+});
+// オープニング
+const openingItems = document.querySelector(".opening-items");
+
+gsap.to(".opening-slide", {
+  xPercent: 100,
+  ease: "expo.out",
+  stagger: {
+    amount: 0.6,
+  },
+  scrollTrigger: {
+    trigger: openingItems,
+    start: "top 70%",
+  },
+});
 
 const nav = document.querySelector("nav");
 const navCloseButton = document.querySelector("nav > .nav-close-button");

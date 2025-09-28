@@ -1,8 +1,4 @@
 /* あ */
-article[data-content="a"] {
-  /* container-type: inline-size; */
-}
-
 .anime-info {
   padding-inline: 2rem;
   padding-block: 5rem;
@@ -129,6 +125,8 @@ article[data-content="a"] {
 
 /* い */
 article[data-content="i"] {
+  padding-block: 3rem;
+
   .grid {
     display: grid;
     gap: clamp(1rem, 4cqi, 2rem);
@@ -140,15 +138,12 @@ article[data-content="i"] {
     > * {
       padding-inline: 1.5rem;
       padding-block: 3rem;
-      border: 1px dashed #000;
     }
   }
 }
 
 .iwate-item1 {
   container: iwate-item1 / inline-size;
-  overflow: hidden;
-  resize: horizontal;
 
   & p {
     margin-top: 2rem;
@@ -195,7 +190,8 @@ article[data-content="i"] {
   li {
     padding: 0.75em 1.5em;
     text-align: center;
-    background: #ddd;
+    border: 1px dashed #000;
+    border-radius: 12px;
   }
 
   & .text-i {
@@ -209,8 +205,6 @@ article[data-content="i"] {
 
 /* う */
 article[data-content="u"] {
-  /* container-type: inline-size; */
-
   padding-inline: 2rem;
   padding-block: 3rem;
   display: grid;
@@ -234,23 +228,23 @@ article[data-content="u"] {
     & > :nth-child(2) {
       font-size: 55px;
       color: tomato;
-      margin-top: -1rem;
+      margin-block-start: -0.25em;
     }
 
     & > div {
       display: flex;
       justify-content: space-between;
       align-items: center;
-      margin-top: -1.5rem;
+      margin-block-start: -0.5em;
 
       & > :nth-child(1) {
-        font-size: 36px;
-        translate: 25% 0;
+        font-size: 30px;
         font-weight: 400;
+        translate: 15% 0;
+        rotate: 10deg;
       }
       & > :nth-child(2) {
         font-size: 60px;
-        letter-spacing: 15px;
       }
     }
   }
@@ -300,7 +294,14 @@ article[data-content="u"] {
   }
 
   .text-u {
-    bottom: 2rem;
+    font-size: var(--size-xxxl);
+    grid-column: 1 / -1;
+    text-align: center;
+    margin-block-start: 2rem;
+
+    span {
+      font-size: var(--size-xl);
+    }
   }
 }
 
@@ -368,8 +369,8 @@ article[data-content="o"] {
     }
   }
 
-  & p {
-    margin-top: 2rem;
+  & .desc {
+    margin-block-start: 2rem;
     max-width: 64ch;
   }
 
@@ -383,16 +384,16 @@ article[data-content="o"] {
     right: 1rem;
     font-weight: bold;
   }
+}
 
-  & h3 {
-    margin-top: 3rem;
-  }
+.opneing-items-title {
+  margin-block-start: 3rem;
 }
 
 .opening-items {
-  margin-top: 1rem;
   display: grid;
   gap: 1rem;
+  margin-block-start: 1rem;
 
   @media (640px < width) {
     grid-template-columns: 1fr 1fr;
@@ -408,15 +409,21 @@ article[data-content="o"] {
   }
 
   & .item-content {
-    padding-block: 2rem;
-    padding-inline: 1.5rem;
+    padding: 1.75em 1.5em;
+
+    > h3 {
+      font-size: var(--size-md);
+    }
+
+    > p {
+      margin-block-start: 1rem;
+    }
   }
 
-  .slide {
+  .opening-slide {
     width: 100%;
     aspect-ratio: 16 / 9;
     background: red;
-    display: none;
   }
 
   & iframe {

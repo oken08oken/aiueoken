@@ -2,15 +2,13 @@
 article[data-content="sa"] {
   background: #ddd;
   padding-block: 3rem;
-  padding-inline: 3rem;
+  padding-inline: var(--padding-inline);
   isolation: isolate;
 
-  @media (700px < width) {
+  .title-wrap {
     display: grid;
-    grid-auto-flow: column;
-    gap: 1rem;
+    place-content: center;
   }
-
   h2 {
     span {
       text-decoration: wavy underline blue;
@@ -25,18 +23,18 @@ article[data-content="sa"] {
 
   .char-sa {
     rotate: -10deg;
-    color: blue;
     font-weight: bold;
-    text-align: end;
-    margin-top: 3rem;
     user-select: none;
+    color: aquamarine;
+    right: 3rem;
+    bottom: 3rem;
   }
 }
 
 /* し */
 article[data-content="si"] {
   padding-block: 3rem;
-  padding-inline: 2rem;
+  padding-inline: var(--padding-inline);
 
   .char-si {
     right: 2rem;
@@ -133,12 +131,12 @@ article[data-content="su"] {
 article[data-content="se"] {
   padding-block-start: 4rem;
   padding-block-end: 12rem;
-  padding-inline: clamp(1rem, 4cqi, 2rem);
+  padding-inline: var(--padding-inline);
   overflow: hidden;
-  border: 3px solid lightgreen;
 
   .title-wrap {
     max-width: 800px;
+    margin-inline: auto;
   }
   h2:nth-of-type(1) {
     rotate: -8deg;
@@ -151,7 +149,7 @@ article[data-content="se"] {
     margin-top: 2rem;
   }
 
-  > :nth-child(2) {
+  .desc {
     width: fit-content;
     margin-left: auto;
     margin-top: 4rem;
@@ -164,7 +162,8 @@ article[data-content="se"] {
 
   .sendai {
     font-weight: bold;
-    margin-top: 2rem;
+    margin-block-start: 2rem;
+    margin-inline-start: 3rem;
   }
 
   .zunda {
@@ -172,6 +171,7 @@ article[data-content="se"] {
     background: greenyellow;
     width: fit-content;
     padding: 0.25em 0.5em;
+    margin-inline-start: 3rem;
   }
 
   .circle {
@@ -212,23 +212,25 @@ article[data-content="se"] {
     border: 2px solid gold;
   }
 
-  .c3 {
-    bottom: 2%;
-    right: 10%;
-    width: min(180px, 30%);
+  .char-se {
+    width: min(180px, 20%);
     display: grid;
     place-items: center;
     color: black;
     font-weight: bold;
     rotate: 15deg;
-    font-size: clamp(30px, 15cqi, 100px);
+    font-size: clamp(20px, 12cqi, 80px);
+    margin-inline-start: auto;
+    margin-inline-end: 3rem;
+    margin-block-start: 2rem;
+    user-select: none;
   }
 }
 
 /* そ */
 article[data-content="so"] {
-  padding-inline: clamp(1rem, 5cqi, 3rem);
   padding-block: 3rem;
+  padding-inline: var(--padding-inline);
   position: relative;
   isolation: isolate;
   overflow: hidden;
@@ -242,6 +244,7 @@ article[data-content="so"] {
   }
 
   h2 {
+    font-size: var(--size-xxl);
     &:nth-of-type(2) {
       margin-inline-start: auto;
       width: fit-content;
@@ -278,7 +281,7 @@ article[data-content="so"] {
     width: min(70vw, 650px);
     left: 0;
     top: 0;
-    translate: -35% -35%;
+    translate: -35% -30%;
     background: yellow;
   }
 
@@ -306,7 +309,7 @@ article[data-content="so"] {
     right: 34%;
   }
 
-  .char-hi {
+  .char-so {
     color: lawngreen;
     width: fit-content;
     margin-inline-start: auto;
@@ -314,11 +317,9 @@ article[data-content="so"] {
     rotate: 15deg;
   }
 
-  .ena {
-    font-size: var(--size-xxxl);
-  }
-
+  .ena,
   .niki {
-    font-size: var(--size-xxl);
+    font-size: var(--size-xl);
+    margin-inline-start: 3rem;
   }
 }

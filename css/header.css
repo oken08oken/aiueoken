@@ -41,7 +41,6 @@ nav > .layout {
   grid-auto-columns: min-content;
   gap: 0.5rem;
   place-content: center;
-  border: 1px solid #000;
 
   > div {
     grid-column: var(--col-num);

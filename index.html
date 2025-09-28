@@ -26,7 +26,7 @@
     <title>本番</title>
   </head>
   <body>
-    <header></header>
+    <!-- <header></header> -->
     <nav>
       <button class="nav-close-button">とじる</button>
       <div class="layout">
@@ -103,13 +103,13 @@
       <span>五十音</span>
     </button>
     <main>
-      <section class="main-grid none" data-gyo="A">
+      <section class="main-grid" data-gyo="A">
         <article class="content" data-content="a" id="a">
           <div class="anime-info relative">
             <h2>あにめは習慣</h2>
             <h3>今期は30タイトル観ました</h3>
             <p>
-              いつの間にかアニメを視聴するのは習慣になり、気づけばシーズン最低で20本近く新作タイトルを観ているような気がします。1日に数本視聴が当たり前なので、ここ数年はアニメを観ない日はないと思います。ただ、本数が増えるにつれて義務視聴に感じるタイトルも勿論出てくるのでそこは少し辛いかも。基本広く浅くがスタンスで、日常系アニメがわりと好きかもです。春アニメの「日々めし、mono、ざつ旅」の日常3本柱は非常に良かったです。
+              いつの間にかアニメを視聴するのは習慣になり、気づけばシーズン最低で20本近く新作タイトルを観ているような気がします。1日に数本視聴が当たり前なので、ここ数年はアニメを観ない日はないと思います。ただ、本数が増えるにつれて義務視聴に感じるタイトルも勿論出てくるのでそこは少し辛いかも。基本広く浅くがスタンスで、日常系アニメがわりと好きかもです。春アニメの「ひびめし、mono、ざつ旅」の日常3本柱は非常に良かったです。
             </p>
             <h3>ニコニコ動画で</h3>
             <p>
@@ -154,13 +154,13 @@
           </div>
           <div class="anime-rank">
             <div class="rank-item1">
-              <h3>マイベスト<span>5</span></h3>
+              <h3>今期マイベスト<span>5</span></h3>
               <ol>
                 <li>フードコートでまた明日</li>
                 <li>タコピーの原罪</li>
                 <li>宇宙人ムームー</li>
                 <li>まったく最近の探偵ときたら</li>
-                <li>フェルマーの料理</li>
+                <li>瑠璃の宝石</li>
               </ol>
             </div>
             <div class="rank-item2 center">
@@ -200,8 +200,8 @@
             <span>うまトマ</span>
             <span>ハンバーグ</span>
             <div>
-              <span>こそ</span>
-              <span>至高</span>
+              <span>しか</span>
+              <span>勝たん!</span>
             </div>
           </h2>
           <div class="text-container">
@@ -211,7 +211,7 @@
             松屋の期間限定といったら、やっぱりうまトマでしょ！と言いたくなるぐらいには人気のメニュー。とにかくうまくて、期間中に「これがレギュラーだったら」と何回思ったことか。もはやこれのために松屋に行きたい。ちなみにレギュラー化してから松屋には行けてないのよね。あとでたらふく食べる予定です。
           </p>
           <div class="decorative char-u size-3">う</div>
-          <div class="decorative text-u size-2">980円</div>
+          <div class="text-u">980<span>円で幸せになれる</span></div>
         </article>
         <article class="full" data-content="e" id="e">
           <div class="stack relative">
@@ -235,10 +235,10 @@
             <span>おーぷにんぐ</span>
             <span>の文化っていいよね</span>
           </h2>
-          <p>
-            色々なアニメのオープニングを観るのが結構好きです。ユーチューブで2時間くらい時間を費やすことも普通にあります。最近はあまり観れてないですが。気に入ってるものは何周もしたり、それきっかけでその曲のMVとかも好きになることがあります。
+          <p class="desc">
+            色々なアニメのオープニングを観るのが結構好きです。ユーチューブで2時間くらい時間を費やすことも普通にあります。最近はあまり観れてないですが。気に入ってるものは何周もしたり、それきっかけでその曲のMVとかも好きになることがあります。いつかアニメのオープニングのようなwebサイトを作れるようになりたいと思っています。
           </p>
-          <h3>よく観るオープニング</h3>
+          <h3 class="opneing-items-title">よく観るオープニング</h3>
           <div class="opening-items">
             <div class="item">
               <div class="stack hidden">
@@ -250,9 +250,9 @@
                   referrerpolicy="strict-origin-when-cross-origin"
                   allowfullscreen
                 ></iframe>
-                <div class="slide"></div>
+                <div class="opening-slide"></div>
               </div>
-              <div class="item-content">
+              <div class="item-content data-opening">
                 <h3>君は冥土様。</h3>
                 <p>
                   独特な世界観というか、キャラクターたちはほとんど出演せずにアニメ以外の演出で魅せる感じでかなり好きです。YouTubeに<a
@@ -272,9 +272,9 @@
                   referrerpolicy="strict-origin-when-cross-origin"
                   allowfullscreen
                 ></iframe>
-                <div class="slide"></div>
+                <div class="opening-slide"></div>
               </div>
-              <div class="item-content">
+              <div class="item-content data-opening">
                 <h3>好きな子がめがねを忘れた</h3>
                 <p>
                   カメラ使いが凄くてぬるぬると動きがあって観てて楽しいです。めがねが題材なことから画面がぼやける表現などもあって好きなオープニング。
@@ -291,9 +291,9 @@
                   referrerpolicy="strict-origin-when-cross-origin"
                   allowfullscreen
                 ></iframe>
-                <div class="slide"></div>
+                <div class="opening-slide"></div>
               </div>
-              <div class="item-content">
+              <div class="item-content data-opening">
                 <h3>アンデッドアンラック</h3>
                 <p>
                   初めて観た時の印象はめちゃくちゃかっこいい。映像ももちろん曲のかっこよさがよりオープニングに拍車をかけてる気がします。途中の手拍子見たいなのも好き。
@@ -303,70 +303,70 @@
             <div class="item">
               <div class="stack hidden">
                 <iframe
-                  src="https://www.youtube.com/embed/L9u-Edb3QjA?si=XWdwuf1SjgXl3Hha"
+                  src="https://www.youtube.com/embed/2e_Zo9Jaw2M?si=_W2EbWtmMD2Y2kLb"
                   title="YouTube video player"
                   frameborder="0"
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                   referrerpolicy="strict-origin-when-cross-origin"
                   allowfullscreen
                 ></iframe>
-                <div class="slide"></div>
+                <div class="opening-slide"></div>
               </div>
-              <div class="item-content">
-                <h3>沖縄で好きになった子が方言すぎてツラすぎる</h3>
+              <div class="item-content data-opening">
+                <h3>SHY</h3>
                 <p>
-                  ダンスがメインのオープニングです。アニメも好きでしたが、これを毎回観るのも楽しみにしてました。比嘉さんは可愛いです。あとシーサー？のキャラクターも印象に残ってます。
+                  かなりクオリティの高いオープニングだと思います。特にモーショングラフィックスの表現が多彩で、いつかこんな表現をwebでもできるようになりたいです。
                 </p>
               </div>
             </div>
             <div class="item">
               <div class="stack hidden">
                 <iframe
-                  src="https://www.youtube.com/embed/stzAsF51T_w?si=XTZmiO0YcbrH8sJQ"
+                  src="https://www.youtube.com/embed/u9RuD4zUzJY?si=8sWu9ZXuIP28k5-A"
                   title="YouTube video player"
                   frameborder="0"
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                   referrerpolicy="strict-origin-when-cross-origin"
                   allowfullscreen
                 ></iframe>
-                <div class="slide"></div>
+                <div class="opening-slide"></div>
               </div>
-              <div class="item-content">
-                <h3>アンデッドアンラック</h3>
+              <div class="item-content data-opening">
+                <h3>悪役令嬢転生おじさん</h3>
                 <p>
-                  初めて観た時の印象はめちゃくちゃかっこいい。映像ももちろん曲のかっこよさがよりオープニングに拍車をかけてる気がします。途中の手拍子見たいなのも好き。
+                  サビからのコマ割りみたいな感じで動くのに躍動感があるのが好きです。一番は最後のタイトルが出る瞬間で、なぜかかっこよく感じます。さすがグレイス様。
                 </p>
               </div>
             </div>
             <div class="item">
               <div class="stack hidden">
                 <iframe
-                  src="https://www.youtube.com/embed/stzAsF51T_w?si=XTZmiO0YcbrH8sJQ"
+                  src="https://www.youtube.com/embed/LkBWIKyLbA0?si=graZ5dR1XVtXP9ee"
                   title="YouTube video player"
                   frameborder="0"
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                   referrerpolicy="strict-origin-when-cross-origin"
                   allowfullscreen
                 ></iframe>
-                <div class="slide"></div>
+                <div class="opening-slide"></div>
               </div>
-              <div class="item-content">
-                <h3>アンデッドアンラック</h3>
+              <div class="item-content data-opening">
+                <h3>ジャヒー様はくじけない！</h3>
                 <p>
-                  初めて観た時の印象はめちゃくちゃかっこいい。映像ももちろん曲のかっこよさがよりオープニングに拍車をかけてる気がします。途中の手拍子見たいなのも好き。
+                  THEアニソンって感じで好きです。2期のも良いのですがやっぱりこちらの方がよく観ます。キャラクターが可愛いのでそこも良い。
                 </p>
               </div>
             </div>
           </div>
-          <div class="text-o size-2">OPENING</div>
+          <div class="text-o size-3">OPENING</div>
           <div class="decorative char-o size-4">お</div>
         </article>
       </section>
 
-      <section class="main-grid none" data-gyo="KA">
-        <article class="content relative" data-content="ka">
+      <section class="main-grid" data-gyo="KA">
+        <article class="content relative" data-content="ka" id="ka">
           <div class="center">
-            <h2>かふぇでのんのんびより</h2>
+            <h2>かふぇでのんのんびのり</h2>
           </div>
           <div class="center relative">
             <p class="text">
@@ -385,7 +385,7 @@
           </div>
           <div class="decorative text-ka size-1">I Love Cafe</div>
         </article>
-        <article class="content" data-content="ki">
+        <article class="content" data-content="ki" id="ki">
           <div class="relative">
             <h2>きういフルーツはうまい</h2>
             <p>
@@ -418,7 +418,7 @@
             </div>
           </div>
         </article>
-        <article class="full" data-content="ku">
+        <article class="full" data-content="ku" id="ku">
           <h2>
             <span>く</span>
             <span>つ</span>
@@ -440,7 +440,7 @@
           </div>
           <p class="new size-2">New Balance is Awesome</p>
         </article>
-        <article class="content relative" data-content="ke">
+        <article class="content relative" data-content="ke" id="ke">
           <h2><span>けんすい</span><span>スタンドが欲しい</span></h2>
           <p>
             家にダンベルとベンチがあるのでちょくちょく筋トレしてます。
@@ -452,7 +452,7 @@
           <p>目指せ逆三角形</p>
           <div class="decorative char-ke size-3">け</div>
         </article>
-        <article class="content" data-content="ko">
+        <article class="content" data-content="ko" id="ko">
           <div class="rice">
             <span>米</span>
             <span>米</span>
@@ -475,11 +475,11 @@
               <p>
                 やっぱりお米が最強です。パンもパスタも美味しいですがなんだかんだお米が一番。一時期、とある野球チームがお米のことで話題になりましたがしっかりと食べないと力が出ないです。米は力の源です。お米は禁止したらいけないです。
               </p>
-              <p>あっ、でもラーメンは匹敵するかも、、、、。</p>
+              <p>米最強といいましたが、ラーメンは米に匹敵するかも。</p>
               <div class="decorative char-ko size-4">こ</div>
             </div>
           </div>
-          <div class="rice rice-bottom">
+          <div class="rice">
             <span>米</span>
             <span>米</span>
             <span>米</span>
@@ -496,17 +496,19 @@
         </article>
       </section>
 
-      <section class="main-grid none" data-gyo="SA">
-        <article class="full" data-content="sa">
-          <div>
-            <h2><span>さむい</span>のには強いかも</h2>
-            <p>
-              東北出身ということもあってか、比較的寒さには強いような気がします。下手したら11月中旬くらいまで半袖で過ごすこともあるので、やっぱ強い気がします。学生の頃で仙台にいたとき、12月に半袖でバイトに出勤してめちゃくちゃ驚かれたことがありますが流石にあれは寒かったです。服を全然持っていないというのも影響していると思いますが、わりと1年を通じて半袖です。
-            </p>
+      <section class="main-grid" data-gyo="SA">
+        <article class="full" data-content="sa" id="sa">
+          <div class="center-wrapper relative">
+            <div class="title-wrap">
+              <h2><span>さむい</span>のには強いかも</h2>
+              <p>
+                東北出身ということもあってか、比較的寒さには強いような気がします。下手したら11月中旬くらいまで半袖で過ごすこともあるので、やっぱ強い気がします。学生の頃で仙台にいたとき、12月に半袖でバイトに出勤してめちゃくちゃ驚かれたことがありますが流石にあれは寒かったです。服を全然持っていないというのも影響していると思いますが、わりと1年を通じて半袖です。
+              </p>
+            </div>
+            <div class="decorative char-sa size-4">さ</div>
           </div>
-          <div class="char-sa size-4">さ</div>
         </article>
-        <article class="content" data-content="si">
+        <article class="content" data-content="si" id="si">
           <div class="stack">
             <h2>しげのごろうが主人公で一番好き</h2>
             <p class="size-2 text-si">茂野吾郎</p>
@@ -562,7 +564,7 @@
             </li>
           </ul>
         </article>
-        <article class="content" data-content="su">
+        <article class="content" data-content="su" id="su">
           <h2>すきるについて</h2>
           <ul>
             <li>
@@ -613,24 +615,29 @@
             <div class="char-su size-3">す</div>
           </div>
         </article>
-        <article class="content relative" data-content="se">
-          <div class="title-wrap">
-            <h2>せんだいに少しだけ</h2>
-            <h2>住んでました</h2>
+        <article class="full relative" data-content="se" id="se">
+          <div class="center-wrapper">
+            <div class="title-wrap">
+              <h2>せんだいに少しだけ</h2>
+              <h2>住んでました</h2>
+            </div>
+            <div class="desc">
+              <h3>東北のニューヨーク</h3>
+              <p>
+                東北の大都会で杜の都とも呼ばれる仙台市は、専門学生の頃に住んでいました。たったの2年間でしたが結構思い出に残っています。とはいえ卒業してからも一度も行けていないので、当時のことを思い出すという意味でもそのうち行きたいと思っています。仙台で一番いったら個人的にずんだシェイクで、当時はめちゃくちゃ好きでした。今は機会がないので飲めていませんが、おそらく仙台にいたら毎日飲むと思うぐらいには好きです。
+              </p>
+            </div>
+            <div class="sendai size-2">仙台</div>
+            <div class="zunda">ずんだシェイク最高</div>
           </div>
-          <div>
-            <h3>東北のニューヨーク</h3>
-            <p>
-              東北の大都会で杜の都とも呼ばれる仙台市は、専門学生の頃に住んでいました。たったの2年間でしたが結構思い出に残っています。とはいえ卒業してからも一度も行けていないので、当時のことを思い出すという意味でもそのうち行きたいと思っています。仙台で一番いったら個人的にずんだシェイクで、当時はめちゃくちゃ好きでした。今は機会がないので飲めていませんが、おそらく仙台にいたら毎日飲むと思うぐらいには好きです。
-            </p>
-          </div>
-          <div class="sendai size-2">仙台</div>
-          <div class="zunda">ずんだシェイク最高</div>
+
           <div class="decorative circle c1"></div>
           <div class="decorative circle c2"></div>
-          <div class="decorative circle c3">せ</div>
+          <div class="center-wrapper relative">
+            <div class="circle char-se">せ</div>
+          </div>
         </article>
-        <article class="full relative" data-content="so">
+        <article class="full relative" data-content="so" id="so">
           <div class="center-wrapper relative">
             <h2>そんなもんね</h2>
             <div class="box">
@@ -653,19 +660,21 @@
               春アニメの中ではダントツに好きだったひび飯。そのアニメの主題歌になります。オープニング映像ももちろん素敵ですが曲もすごい好きです。最近だと毎日聴いてます。
             </p>
           </div>
-          <div class="char-hi size-3">ひ</div>
-          <div class="ena">えなるる〜</div>
-          <div class="niki">ひび飯2期待ってます</div>
-          <div class="niki">いや、本当に</div>
-          <div class="niki">切実に</div>
-          <div class="circle circle-3"></div>
-          <div class="circle circle-4"></div>
+          <div class="center-wrapper">
+            <div class="char-so size-3">そ</div>
+            <div class="ena">えなるる〜</div>
+            <div class="niki">ひび飯2期待ってます</div>
+            <div class="niki">いや、本当に</div>
+            <div class="niki">切実に</div>
+            <div class="circle circle-3"></div>
+            <div class="circle circle-4"></div>
+          </div>
         </article>
       </section>
 
-      <section class="main-grid none" data-gyo="TA">
+      <section class="main-grid" data-gyo="TA">
         <div class="content">
-          <article data-content="ta">
+          <article data-content="ta" id="ta">
             <div class="layout">
               <h2>ただ君のままで</h2>
               <div class="main-char">た</div>
@@ -687,7 +696,7 @@
               </div>
             </div>
           </article>
-          <article data-content="ti">
+          <article data-content="ti" id="ti">
             <div class="layout">
               <h2>ちょこミント</h2>
               <div class="main-char">ち</div>
@@ -699,7 +708,7 @@
               </div>
             </div>
           </article>
-          <article data-content="tu">
+          <article data-content="tu" id="tu">
             <div class="layout">
               <h2>つなマヨ</h2>
               <div class="item">
@@ -721,7 +730,7 @@
               <div class="main-char">つ</div>
             </div>
           </article>
-          <article data-content="te">
+          <article data-content="te" id="te">
             <div class="layout">
               <h2>てき</h2>
               <div class="item">
@@ -734,7 +743,7 @@
               <div class="main-char">て</div>
             </div>
           </article>
-          <article data-content="to">
+          <article data-content="to" id="to">
             <div class="layout">
               <h2>ときめき</h2>
               <div class="main-char">と</div>
@@ -759,10 +768,10 @@
         </div>
       </section>
 
-      <section class="main-grid none" data-gyo="NA">
+      <section class="main-grid" data-gyo="NA">
         <div class="full">
           <div class="layout center-wrapper">
-            <article data-content="na">
+            <article data-content="na" id="na">
               <div class="main-char">な</div>
               <div class="item">
                 <h2>なかのに住んでます</h2>
@@ -772,7 +781,7 @@
                 <div class="roma-text">NAKANO</div>
               </div>
             </article>
-            <article data-content="ni">
+            <article data-content="ni" id="ni">
               <div class="main-char">に</div>
               <div class="item">
                 <h2>にら炒めはうまい</h2>
@@ -787,7 +796,7 @@
                 <div class="roma-text">NIRA</div>
               </div>
             </article>
-            <article data-content="nu">
+            <article data-content="nu" id="nu">
               <div class="main-char">ぬ</div>
               <div class="item">
                 <h2>ぬは思いつかない</h2>
@@ -797,7 +806,7 @@
                 <div class="roma-text">NONU</div>
               </div>
             </article>
-            <article data-content="ne">
+            <article data-content="ne" id="ne">
               <div class="main-char">ね</div>
               <div class="item">
                 <h2>ねっとスーパーで少し</h2>
@@ -807,7 +816,7 @@
                 <div class="roma-text">NET</div>
               </div>
             </article>
-            <article data-content="no">
+            <article data-content="no" id="no">
               <div class="main-char">の</div>
               <div class="item">
                 <h2>のみかいはほどほどに</h2>
@@ -821,9 +830,9 @@
         </div>
       </section>
 
-      <section class="main-grid none" data-gyo="HA">
+      <section class="main-grid" data-gyo="HA">
         <div class="content">
-          <article data-content="ha">
+          <article data-content="ha" id="ha">
             <h2>はち月生まれ</h2>
             <p>
               <span>#おとめ座</span>
@@ -835,7 +844,7 @@
             </p>
             <div class="decorative char-l size-6">は</div>
           </article>
-          <article data-content="hi">
+          <article data-content="hi" id="hi">
             <h2>ひろアカついに最終章</h2>
             <p>
               <span>#ついに最終章か寂しいな</span>
@@ -851,7 +860,7 @@
             </p>
             <div class="decorative char-r size-6">ひ</div>
           </article>
-          <article data-content="hu">
+          <article data-content="hu" id="hu">
             <h2>ふぁみまの豚まん！</h2>
             <p>
               <span>#豚まんといったらファミマが最強</span>
@@ -864,7 +873,7 @@
             </p>
             <div class="decorative char-c size-6">ふ</div>
           </article>
-          <article data-content="he">
+          <article data-content="he" id="he">
             <h2>へんじんのサラダボウル</h2>
             <p>
               <span
@@ -880,7 +889,7 @@
             </p>
             <div class="decorative char-l size-6">へ</div>
           </article>
-          <article data-content="ho">
+          <article data-content="ho" id="ho">
             <h2>ほしいもの</h2>
             <p>
               <span>#ニンテンドースイッチ2</span>
@@ -897,7 +906,7 @@
         </div>
       </section>
 
-      <section class="main-grid none" data-gyo="MA">
+      <section class="main-grid" data-gyo="MA">
         <div class="content">
           <article data-content="ma" id="ma">
             <div class="stack center">
@@ -917,7 +926,7 @@
               <li>デザイン</li>
             </ul>
           </article>
-          <article data-content="mi">
+          <article data-content="mi" id="mi">
             <div class="stack center">
               <div class="main-char">み</div>
               <div class="mi-title-content">
@@ -932,7 +941,7 @@
               <p>Handed</p>
             </div>
           </article>
-          <article data-content="mu">
+          <article data-content="mu" id="mu">
             <div class="stack">
               <div class="stack center">
                 <div class="main-char">む</div>
@@ -944,7 +953,7 @@
               <p class="mu-text">カメムシ</p>
             </div>
           </article>
-          <article data-content="me">
+          <article data-content="me" id="me">
             <div class="stack center">
               <div class="main-char">め</div>
               <div class="me-item">
@@ -965,7 +974,7 @@
               </div>
             </div>
           </article>
-          <article data-content="mo">
+          <article data-content="mo" id="mo">
             <div class="stack center">
               <div class="main-char">も</div>
               <div class="item">
@@ -978,19 +987,19 @@
         </div>
       </section>
 
-      <section class="main-grid none" data-gyo="YA">
+      <section class="main-grid" data-gyo="YA">
         <div class="full col-flex">
-          <article data-content="ya">
+          <article data-content="ya" id="ya">
             <h2>やきゅう</h2>
             <p>小中学の時に少しだけやっていました。</p>
             <div class="decorative char size-6">や</div>
           </article>
-          <article data-content="yu">
+          <article data-content="yu" id="yu">
             <h2>ゆーちゅーぶ</h2>
             <p>楽しいけど見過ぎには注意しないと。</p>
             <div class="decorative char size-6">ゆ</div>
           </article>
-          <article data-content="yo">
+          <article data-content="yo" id="yo">
             <h2>よーぐると</h2>
             <p>毎日食べたいくらいには好き。</p>
             <div class="decorative char size-6">よ</div>
@@ -998,37 +1007,37 @@
         </div>
       </section>
 
-      <section class="main-grid none" data-gyo="RA">
+      <section class="main-grid" data-gyo="RA">
         <div class="content">
-          <article data-content="ra">
+          <article data-content="ra" id="ra">
             <h2>らーめんは至高の食べ物</h2>
             <p>
               ラーメンといったら国民食です。東京に来てからは家系を食べたのが一番多いかなと。中野のようすけにある鶏白湯が好きです。
             </p>
             <div class="decorative size-5 char">ら</div>
           </article>
-          <article data-content="ri">
+          <article data-content="ri" id="ri">
             <h2>りざーどんが一番すき</h2>
             <p>
               ポケモンといったら子供のころにやっていたのを思い出します。最初に買ったゲームが「ファイアレッド」だったのでリザードンが一番好きです。
             </p>
             <div class="decorative size-5 char">り</div>
           </article>
-          <article data-content="ru">
+          <article data-content="ru" id="ru">
             <h2>るりドラゴン買いました</h2>
             <p>
               まえから気になっていた漫画だったので、とりあえす1巻だけ購入しました。漫画買ったの専門学校の時の斉木楠雄以来かもしれません。
             </p>
             <div class="decorative size-5 char">る</div>
           </article>
-          <article data-content="re">
+          <article data-content="re" id="re">
             <h2>ればー克服しました</h2>
             <p>
               レバー食べれるようになりました。「真夜中パンチ」というアニメの影響でレバニラ食べたら美味しかったです。前は無理だったのに。
             </p>
             <div class="decorative size-5 char">れ</div>
           </article>
-          <article data-content="ro">
+          <article data-content="ro" id="ro">
             <h2>ろーそんがキング</h2>
             <p>
               コンビニといったら自分の中ではローソンです。最近だと盛りすぎキャンペーンが有名ですがあれは非常に熱い。からあげくんもうまい。
@@ -1038,8 +1047,8 @@
         </div>
       </section>
 
-      <section class="main-grid none" data-gyo="WA">
-        <article class="content relative" data-content="wa">
+      <section class="main-grid" data-gyo="WA">
+        <article class="content relative" data-content="wa" id="wa">
           <h2>和田は今期の<span>推しおもしれー女</span></h2>
           <p class="desc">
             めんどくさくて変顔が多くてウザくてわりとクズだけど、嫌いになれないおもしれー女です。山本が今期のメインヒロインなら和田は今期のメインおもしれーヒロインです。フードコートは今期の中でダントツに好きなアニメです。1話を観た時はこれ12分でいいだろ、普通にだべってるだけじゃんと思っていましたが2話でこれおもろいわとなりました。ちなみにニコニコで観てたのですが、コメ欄も2話からすごい面白いってコメントが増えたのが印象的でした。6話なのが勿体無いくらいです。また最初観た時に、ここ名取イオンじゃね？行ったことあるわって感動したのを覚えてます。
@@ -1102,7 +1111,7 @@
           </div>
           <div class="decorative wa-text size-2">24クール希望</div>
         </article>
-        <article class="full relative" data-content="wo">
+        <article class="full relative" data-content="wo" id="wo">
           <div class="wo-item">
             <h2>「ヲタク」ではないかも</h2>
             <p>
@@ -1112,7 +1121,7 @@
           <div class="decorative char-1 size-6">を</div>
           <div class="decorative char-2 size-6">を</div>
         </article>
-        <article class="content" data-content="wn">
+        <article class="content" data-content="wn" id="wn">
           <h2><span>「ん」</span>まで来ました！</h2>
           <div class="disc">
             <p>ついに終わりです。</p>

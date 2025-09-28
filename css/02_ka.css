@@ -15,8 +15,8 @@ article[data-content="ka"] {
 
   .text-ka {
     writing-mode: vertical-rl;
-    top: 3rem;
-    left: 3rem;
+    top: 1rem;
+    left: 0;
   }
 
   .char-ka {
@@ -46,6 +46,7 @@ article[data-content="ka"] {
 
     .text-ka {
       writing-mode: revert;
+      top: 3rem;
     }
   }
 }
@@ -53,14 +54,14 @@ article[data-content="ka"] {
 .cafe-text-items {
   padding: 2rem 3rem;
   border-radius: 24px;
-  outline: 2px dashed;
+  outline: 4px dotted;
   outline-offset: -1rem;
   background: #eee;
   place-self: center;
   margin-top: 3rem;
 
   > * + * {
-    margin-block-start: 2rem;
+    margin-block-start: 1.5rem;
   }
 
   @media (540px < width) {
