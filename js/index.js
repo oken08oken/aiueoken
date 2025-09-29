@@ -1,9 +1,105 @@
 gsap.registerPlugin(SplitText, ScrollTrigger);
 
+function split(text) {
+  const item = SplitText.create(text, {
+    type: "chars",
+  });
+
+  return item.chars;
+}
+
 const siteWidth = document.querySelector(".site-width");
 window.addEventListener("resize", (e) => {
   siteWidth.textContent = window.innerWidth;
 });
+
+// タイトル
+const aiue = document.querySelector(".aiue");
+const oken = document.querySelector(".oken");
+
+const okenSplit = split(oken);
+const okenChar1 = okenSplit[0];
+const okenChar2 = okenSplit[1];
+const okenChar3 = okenSplit[2];
+
+gsap.set(okenChar1, {
+  xPercent: 100,
+});
+
+const titleTimeline = gsap.timeline();
+titleTimeline.add(aiueTextMotion()).add(okenTextMotion(), "<0.7");
+
+function aiueTextMotion() {
+  const tl = gsap.timeline();
+
+  tl.from(split(aiue), {
+    scale: 0,
+    rotate: 10,
+    transformOrigin: gsap.utils.wrap(["left", "right", "top", "bottom"]),
+    ease: "expo.out",
+    stagger: {
+      amount: 0.4,
+    },
+  }).to(
+    split(aiue),
+    {
+      color: gsap.utils.wrap(["red", "orange", "blue", "green"]),
+      ease: "expo.out",
+      stagger: {
+        amount: 0.1,
+      },
+    },
+    "<0.25"
+  );
+
+  return tl;
+}
+
+function okenTextMotion() {
+  const tl = gsap.timeline({
+    defaults: {
+      ease: "expo.out",
+    },
+  });
+
+  tl.from(okenChar1, {
+    scale: 0,
+  })
+    .to(
+      okenChar1,
+      {
+        xPercent: 0,
+      },
+      "<0.5"
+    )
+    .to(okenChar1, {
+      scale: 1.75,
+    })
+    .from(
+      okenChar2,
+      {
+        scale: 0,
+      },
+      "<0.15"
+    )
+    .from(
+      okenChar3,
+      {
+        scale: 0,
+      },
+      "<0.15"
+    )
+    .to(
+      okenChar1,
+      {
+        scale: 1,
+        ease: "expo.in",
+      },
+      "<"
+    );
+
+  return tl;
+}
 
 // アニメ
 gsap.from(".anime-titles li", {
@@ -61,14 +157,6 @@ navCloseButton.addEventListener("click", (e) => {
     ease: "expo.out",
   });
 });
-
-function split(text) {
-  const item = SplitText.create(text, {
-    type: "chars",
-  });
-
-  return item.chars;
-}
 
 const maTitle = document.querySelector(".ma-title");
 
