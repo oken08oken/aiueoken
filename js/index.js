@@ -157,45 +157,171 @@ function navOpenButtonInitMotion() {
     rotate: 720,
     scale: 0,
     ease: "expo.inOut",
-  }).from(
-    split(navOpenTitle),
-    {
-      scale: 0,
-      ease: "back.out",
-      stagger: {
-        amount: 0.3,
-      },
+  }).from(split(navOpenTitle), {
+    scale: 0,
+    ease: "back.out",
+    stagger: {
+      amount: 0.15,
     },
-    "<0.1"
-  );
+  });
 
   return tl;
 }
 
 // アニメ
-gsap.from(".anime-titles li", {
-  clipPath: "inset(0 100% 0 0)",
-  stagger: {
-    amount: 0.4,
-  },
+const animeTitle = document.querySelector(".anime-title");
+const animeTitleSpan = document.querySelector(".anime-title > span");
+const animeTitleTl = gsap.timeline({
   scrollTrigger: {
-    trigger: ".anime-titles",
+    trigger: animeTitle,
+    start: "top 80%",
   },
 });
-// オープニング
-const openingItems = document.querySelector(".opening-items");
 
-gsap.to(".opening-slide", {
-  xPercent: 100,
+animeTitleTl
+  .from(split(animeTitle), {
+    scale: 0,
+    transformOrigin: "left",
+    ease: "expo.out",
+    stagger: {
+      amount: 0.3,
+    },
+  })
+  .to(
+    animeTitleSpan,
+    {
+      backgroundSize: "100% 100%",
+      color: "white",
+      ease: "expo.out",
+    },
+    "<0.4"
+  );
+
+const animeNames = document.querySelectorAll(".anime-titles li");
+animeNames.forEach((list, i) => {
+  gsap.from(list, {
+    clipPath: "inset(0 100% 0 0)",
+    ease: "expo.inOut",
+    scrollTrigger: {
+      trigger: list,
+    },
+  });
+});
+
+gsap.from(".rank-item1", {
+  scale: 0,
+  rotate: 20,
+  transformOrigin: "bottom left",
   ease: "expo.out",
-  stagger: {
-    amount: 0.6,
-  },
   scrollTrigger: {
-    trigger: openingItems,
+    trigger: ".rank-item1",
+  },
+});
+
+const rankItem2Text = document.querySelector(".rank-item2-text");
+const rankItem2TextSpan = document.querySelector(".rank-item2-text > span");
+const rankItem2TextTl = gsap.timeline({
+  scrollTrigger: {
+    trigger: rankItem2Text,
+    start: "top 50%",
+  },
+});
+
+rankItem2TextTl
+  .from(split(rankItem2Text), {
+    scale: 0,
+    ease: "expo.out",
+    stagger: {
+      amount: 0.3,
+    },
+  })
+  .to(
+    rankItem2TextSpan,
+    {
+      backgroundSize: "100% 100%",
+      ease: "expo.out",
+    },
+    "<0.2"
+  );
+
+// うまとま
+const umatoma1 = document.querySelector(".u-word1");
+const umatoma2 = document.querySelector(".u-word2");
+const umatoma3 = document.querySelector(".u-word3");
+const umatoma4 = document.querySelector(".u-word4");
+const uText2 = document.querySelector(".u-text2");
+
+const umatomaTl = gsap.timeline({
+  scrollTrigger: {
+    trigger: umatoma1,
     start: "top 70%",
   },
 });
+
+umatomaTl
+  .to(umatoma1, {
+    backgroundSize: "100% 100%",
+    ease: "expo.in",
+  })
+  .from(
+    split(umatoma2),
+    {
+      scale: 0,
+      transformOrigin: gsap.utils.wrap(["top", "bottom"]),
+      ease: "expo.out",
+    },
+    "<0.2"
+  )
+  .from(
+    umatoma3,
+    {
+      rotate: -40,
+      scale: 0,
+      ease: "ease.in",
+    },
+    "<0.2"
+  )
+  .from(
+    split(umatoma4),
+    {
+      scale: 0,
+      ease: "expo.out",
+    },
+    "<0.2"
+  );
+
+gsap.from(uText2, {
+  scale: 0,
+  rotate: 50,
+  ease: "expo.out",
+  scrollTrigger: {
+    trigger: uText2,
+  },
+});
+
+// オープニング
+const openingItems = document.querySelectorAll(".opening-slide");
+openingItems.forEach((item) => {
+  gsap.to(item, {
+    xPercent: 100,
+    ease: "expo.inOut",
+    scrollTrigger: {
+      trigger: item,
+    },
+  });
+});
+
+// gsap.to(".opening-slide", {
+//   xPercent: 100,
+//   ease: "expo.out",
+//   stagger: {
+//     amount: 0.6,
+//   },
+//   scrollTrigger: {
+//     trigger: openingItems,
+//     start: "top 70%",
+//   },
+// });
 
 const maTitle = document.querySelector(".ma-title");
 
