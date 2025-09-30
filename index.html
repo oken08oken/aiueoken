@@ -37,71 +37,72 @@
         <div class="oken">おけん</div>
       </h1>
     </header>
+
     <nav>
       <button class="nav-close-button">とじる</button>
       <div class="layout">
-        <div style="--col-num: 10">
+        <div style="--col-num: 10" class="nav-gyo">
           <a href="#a">あ</a>
           <a href="#i">い</a>
           <a href="#u">う</a>
           <a href="#e">え</a>
           <a href="#o">お</a>
         </div>
-        <div style="--col-num: 9">
+        <div style="--col-num: 9" class="nav-gyo">
           <a href="#ka">か</a>
           <a href="#ki">き</a>
           <a href="#ku">く</a>
           <a href="#ke">け</a>
           <a href="#ko">こ</a>
         </div>
-        <div style="--col-num: 8">
+        <div style="--col-num: 8" class="nav-gyo">
           <a href="#sa">さ</a>
           <a href="#si">し</a>
           <a href="#su">す</a>
           <a href="#se">せ</a>
           <a href="#so">そ</a>
         </div>
-        <div style="--col-num: 7">
+        <div style="--col-num: 7" class="nav-gyo">
           <a href="#ta">た</a>
           <a href="#ti">ち</a>
           <a href="#tu">つ</a>
           <a href="#te">て</a>
           <a href="#to">と</a>
         </div>
-        <div style="--col-num: 6">
+        <div style="--col-num: 6" class="nav-gyo">
           <a href="#na">な</a>
           <a href="#ni">に</a>
           <a href="#nu">ぬ</a>
           <a href="#ne">ね</a>
           <a href="#no">の</a>
         </div>
-        <div style="--col-num: 5">
+        <div style="--col-num: 5" class="nav-gyo">
           <a href="#ha">は</a>
           <a href="#hi">ひ</a>
           <a href="#hu">ふ</a>
           <a href="#he">へ</a>
           <a href="#ho">ほ</a>
         </div>
-        <div style="--col-num: 4">
+        <div style="--col-num: 4" class="nav-gyo">
           <a href="#ma">ま</a>
           <a href="#mi">み</a>
           <a href="#mu">む</a>
           <a href="#me">め</a>
           <a href="#mo">も</a>
         </div>
-        <div style="--col-num: 3">
+        <div style="--col-num: 3" class="nav-gyo">
           <a href="#ya">や</a>
           <a href="#yu">ゆ</a>
           <a href="#yo">よ</a>
         </div>
-        <div style="--col-num: 2">
+        <div style="--col-num: 2" class="nav-gyo">
           <a href="#ra">ら</a>
           <a href="#ri">り</a>
           <a href="#ru">る</a>
           <a href="#re">れ</a>
           <a href="#ro">ろ</a>
         </div>
-        <div style="--col-num: 1">
+        <div style="--col-num: 1" class="nav-gyo">
           <a href="#wa">わ</a>
           <a href="#wo">を</a>
           <a href="#wn">ん</a>
@@ -110,10 +111,11 @@
     </nav>
     <button class="nav-open-button stack center">
       <span>50</span>
-      <span>五十音</span>
+      <span class="nav-open-title">五十音</span>
     </button>
+
     <main>
-      <section class="main-grid" data-gyo="A">
+      <section class="main-grid none" data-gyo="A">
         <article class="content" data-content="a" id="a">
           <div class="anime-info relative">
             <h2>あにめは習慣</h2>
@@ -240,7 +242,7 @@
             <li>#やっぱめんどくさいかも</li>
           </ul>
         </article>
-        <article class="content relative" data-content="o" id="o">
+        <!-- <article class="content relative" data-content="o" id="o">
           <h2>
             <span>おーぷにんぐ</span>
             <span>の文化っていいよね</span>
@@ -370,10 +372,10 @@
           </div>
           <div class="text-o size-3">OPENING</div>
           <div class="decorative char-o size-4">お</div>
-        </article>
+        </article> -->
       </section>
 
-      <section class="main-grid" data-gyo="KA">
+      <section class="main-grid none" data-gyo="KA">
         <article class="content relative" data-content="ka" id="ka">
           <div class="center">
             <h2>かふぇでのんのんびのり</h2>
@@ -506,7 +508,7 @@
         </article>
       </section>
 
-      <section class="main-grid" data-gyo="SA">
+      <section class="main-grid none" data-gyo="SA">
         <article class="full" data-content="sa" id="sa">
           <div class="center-wrapper relative">
             <div class="title-wrap">
@@ -682,7 +684,7 @@
         </article>
       </section>
 
-      <section class="main-grid" data-gyo="TA">
+      <section class="main-grid none" data-gyo="TA">
         <div class="content">
           <article data-content="ta" id="ta">
             <div class="layout">
@@ -778,7 +780,7 @@
         </div>
       </section>
 
-      <section class="main-grid" data-gyo="NA">
+      <section class="main-grid none" data-gyo="NA">
         <div class="full">
           <div class="layout center-wrapper">
             <article data-content="na" id="na">
@@ -840,7 +842,7 @@
         </div>
       </section>
 
-      <section class="main-grid" data-gyo="HA">
+      <section class="main-grid none" data-gyo="HA">
         <div class="content">
           <article data-content="ha" id="ha">
             <h2>はち月生まれ</h2>
@@ -916,7 +918,7 @@
         </div>
       </section>
 
-      <section class="main-grid" data-gyo="MA">
+      <section class="main-grid none" data-gyo="MA">
         <div class="content">
           <article data-content="ma" id="ma">
             <div class="stack center">
@@ -997,7 +999,7 @@
         </div>
       </section>
 
-      <section class="main-grid" data-gyo="YA">
+      <section class="main-grid none" data-gyo="YA">
         <div class="full col-flex">
           <article data-content="ya" id="ya">
             <h2>やきゅう</h2>
@@ -1017,7 +1019,7 @@
         </div>
       </section>
 
-      <section class="main-grid" data-gyo="RA">
+      <section class="main-grid none" data-gyo="RA">
         <div class="full">
           <article data-content="ra" id="ra">
             <h2>らーめんは至高の食べ物</h2>
@@ -1057,7 +1059,7 @@
         </div>
       </section>
 
-      <section class="main-grid" data-gyo="WA">
+      <section class="main-grid none" data-gyo="WA">
         <article class="content relative" data-content="wa" id="wa">
           <h2>和田は今期の<span>推しおもしれー女</span></h2>
           <p class="desc">

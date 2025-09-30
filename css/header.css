@@ -22,6 +22,7 @@ nav {
 
   position: fixed;
   inset: 50% 0 0 0;
+  overflow: hidden;
 
   @media (600px < width) {
     inset: revert;
@@ -41,9 +42,10 @@ nav {
     display: block;
     padding-block: 0.5em;
     background: var(--bg);
+    transition: scale 0.2s;
 
     &:hover {
-      background: pink;
+      scale: 1.5;
     }
   }
 }
@@ -62,9 +64,10 @@ nav > .layout {
   a {
     display: block;
     font-size: var(--size-lg);
+    transition: rotate 0.05s ease-out, scale 0.05s ease-out;
 
     &:hover {
-      rotate: 10deg;
+      rotate: 18deg;
       scale: 1.3;
     }
 

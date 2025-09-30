@@ -26,10 +26,58 @@ gsap.set(okenChar1, {
   xPercent: 100,
 });
 
+const nav = document.querySelector("nav");
+const navCloseButton = document.querySelector("nav > .nav-close-button");
+const navOpenButton = document.querySelector(".nav-open-button");
+const navOpenTitle = document.querySelector(".nav-open-title");
+
+navOpenButton.addEventListener("click", (e) => {
+  const tl = gsap.timeline();
+
+  gsap.to(navOpenButton, {
+    transformOrigin: "right bottom",
+    scale: 0,
+    ease: "expo.out",
+  });
+
+  tl.to(nav, {
+    scale: 1,
+    transformOrigin: "right bottom",
+    ease: "expo.out",
+  }).from(
+    ".nav-gyo",
+    {
+      scale: 0,
+      ease: "expo.out",
+      transformOrigin: "top",
+      stagger: {
+        amount: 0.2,
+      },
+    },
+    "<0.2"
+  );
+});
+
+navCloseButton.addEventListener("click", (e) => {
+  gsap.to(navOpenButton, {
+    scale: 1,
+    ease: "expo.out",
+  });
+
+  gsap.to(nav, {
+    scale: 0,
+    transformOrigin: "right bottom",
+    ease: "expo.out",
+  });
+});
+
 const titleTimeline = gsap.timeline({
   delay: 1,
 });
-titleTimeline.add(aiueTextMotion()).add(okenTextMotion(), "<0.7");
+titleTimeline
+  .add(aiueTextMotion())
+  .add(okenTextMotion(), "<0.7")
+  .add(navOpenButtonInitMotion());
 
 function aiueTextMotion() {
   const tl = gsap.timeline();
@@ -103,6 +151,27 @@ function okenTextMotion() {
   return tl;
 }
 
+function navOpenButtonInitMotion() {
+  const tl = gsap.timeline();
+  tl.from(navOpenButton, {
+    rotate: 720,
+    scale: 0,
+    ease: "expo.inOut",
+  }).from(
+    split(navOpenTitle),
+    {
+      scale: 0,
+      ease: "back.out",
+      stagger: {
+        amount: 0.3,
+      },
+    },
+    "<0.1"
+  );
+
+  return tl;
+}
+
 // アニメ
 gsap.from(".anime-titles li", {
   clipPath: "inset(0 100% 0 0)",
@@ -126,38 +195,6 @@ gsap.to(".opening-slide", {
     trigger: openingItems,
     start: "top 70%",
   },
-});
-
-const nav = document.querySelector("nav");
-const navCloseButton = document.querySelector("nav > .nav-close-button");
-const navOpenButton = document.querySelector(".nav-open-button");
-
-navOpenButton.addEventListener("click", (e) => {
-  const target = e.target;
-  gsap.to(navOpenButton, {
-    transformOrigin: "right bottom",
-    scale: 0,
-    ease: "expo.out",
-  });
-
-  gsap.to(nav, {
-    scale: 1,
-    transformOrigin: "right bottom",
-    ease: "expo.out",
-  });
-});
-
-navCloseButton.addEventListener("click", (e) => {
-  gsap.to(navOpenButton, {
-    scale: 1,
-    ease: "expo.out",
-  });
-
-  gsap.to(nav, {
-    scale: 0,
-    transformOrigin: "right bottom",
-    ease: "expo.out",
-  });
 });
 
 const maTitle = document.querySelector(".ma-title");
