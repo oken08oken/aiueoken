@@ -39,6 +39,9 @@ a {
   font-size: var(--size-base);
   text-decoration: none;
 }
+button {
+  color: inherit;
+}
 
 body {
   font-family: "Roboto", "Noto Sans JP", sans-serif;
