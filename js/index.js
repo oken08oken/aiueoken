@@ -26,7 +26,9 @@ gsap.set(okenChar1, {
   xPercent: 100,
 });
 
-const titleTimeline = gsap.timeline();
+const titleTimeline = gsap.timeline({
+  delay: 1,
+});
 titleTimeline.add(aiueTextMotion()).add(okenTextMotion(), "<0.7");
 
 function aiueTextMotion() {
