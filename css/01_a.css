@@ -384,7 +384,8 @@ article[data-content="o"] {
 
     & > :nth-child(1) {
       font-size: var(--size-xl);
-      background: #ddd;
+      background: red;
+      background-size: 0 100%;
       padding: 0.25em;
     }
   }

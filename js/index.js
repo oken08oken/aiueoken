@@ -244,6 +244,31 @@ rankItem2TextTl
     "<0.2"
   );
 
+// いわて
+const iwateItem2Title = document.querySelector(".iwate-item2-title");
+gsap.from(split(iwateItem2Title), {
+  scale: 0,
+  ease: "expo.out",
+  stagger: {
+    amount: 0.2,
+  },
+  scrollTrigger: {
+    trigger: iwateItem2Title,
+  },
+});
+
+const iwateItem2Lists = document.querySelectorAll(".iwate-item2-list > li");
+iwateItem2Lists.forEach((list) => {
+  gsap.from(list, {
+    scale: 0,
+    ease: "expo.out",
+    duration: 0.35,
+    scrollTrigger: {
+      trigger: list,
+    },
+  });
+});
+
 // うまとま
 const umatoma1 = document.querySelector(".u-word1");
 const umatoma2 = document.querySelector(".u-word2");
@@ -299,29 +324,177 @@ gsap.from(uText2, {
   },
 });
 
+// エックス
+const eTitle = document.querySelector(".e-title");
+
+gsap.from(split(eTitle), {
+  xPercent: -100,
+  scale: 0,
+  ease: "expo.out",
+  stagger: {
+    amount: 0.4,
+  },
+  scrollTrigger: {
+    trigger: eTitle,
+  },
+});
+
 // オープニング
+const oTitle = document.querySelector(".o-title");
+const oTitleWord1 = document.querySelector(".o-title-word1");
+const oTitleWord2 = document.querySelector(".o-title-word2");
+const oTitleTl = gsap.timeline({
+  scrollTrigger: {
+    trigger: oTitle,
+  },
+});
+
+oTitleTl
+  .from(oTitleWord1, {
+    clipPath: "inset(0 100% 0 0)",
+    ease: "expo.out",
+  })
+  .from(
+    split(oTitleWord2),
+    {
+      scale: 0,
+      transformOrigin: gsap.utils.wrap(["top", "bottom"]),
+      ease: "expo.out",
+      stagger: {
+        aomount: 0.3,
+      },
+    },
+    "<0.15"
+  );
+
 const openingItems = document.querySelectorAll(".opening-slide");
+
 openingItems.forEach((item) => {
   gsap.to(item, {
     xPercent: 100,
     ease: "expo.inOut",
+    duration: 0.4,
     scrollTrigger: {
       trigger: item,
+      start: "top 90%",
     },
   });
 });
 
-// gsap.to(".opening-slide", {
-//   xPercent: 100,
-//   ease: "expo.out",
-//   stagger: {
-//     amount: 0.6,
-//   },
-//   scrollTrigger: {
-//     trigger: openingItems,
-//     start: "top 70%",
-//   },
-// });
+// か
+const kaTitle = document.querySelector(".ka-title");
+const kaTitleSpan = document.querySelector(".ka-title > span");
+const kaTitleTl = gsap.timeline({
+  scrollTrigger: {
+    trigger: kaTitle,
+    start: "top center",
+  },
+});
+
+kaTitleTl
+  .from(split(kaTitle), {
+    opacity: 0,
+    stagger: {
+      amount: 0.3,
+    },
+  })
+  .to(
+    split(kaTitleSpan),
+    {
+      rotate: 360,
+      duration: 4,
+    },
+    "<0.5"
+  );
+
+// キウイ
+const kiTitle = document.querySelector(".ki-title");
+const kiTitleTl = gsap.timeline({
+  defaults: {
+    ease: "expo.out",
+  },
+  scrollTrigger: {
+    trigger: kiTitle,
+    start: "top 80%",
+  },
+});
+
+kiTitleTl.to(split(kiTitle), {
+  color: gsap.utils.wrap(["pink", "yellow", "green"]),
+  stagger: {
+    amount: 0.3,
+  },
+});
+kiTitleTl.to(
+  split(kiTitle),
+  {
+    color: "#333",
+    stagger: {
+      amount: 0.3,
+    },
+  },
+  "-=0.1"
+);
+
+const kiwiItems = document.querySelectorAll(".kiwi-items > .item");
+kiwiItems.forEach((item) => {
+  gsap.to(item, {
+    clipPath: "circle(75% at 50% 50%)",
+    ease: "expo.out",
+    scrollTrigger: {
+      trigger: item,
+      start: "top 70%",
+    },
+  });
+});
+
+// くつ
+const kuTitle = document.querySelector(".ku-title");
+gsap.from(kuTitle, {
+  scale: 0,
+  rotate: -100,
+  ease: "back.out",
+  duration: 0.3,
+  scrollTrigger: {
+    trigger: kuTitle,
+  },
+});
+
+// けんすい
+const kShape = document.querySelector(".k-shape");
+gsap.from(kShape, {
+  rotate: 80,
+  scale: 0,
+  ease: "expo.inOut",
+  scrollTrigger: {
+    trigger: kShape,
+    start: "top 70%",
+  },
+});
+
+// こめ
+const riceTop = document.querySelector(".rice-top");
+const riceBottom = document.querySelector(".rice-bottom");
+
+const koTitle = document.querySelector(".ko-title");
+const koTitleTl = gsap.timeline({
+  defaults: {
+    ease: "expo.out",
+    duration: 0.2,
+  },
+  scrollTrigger: {
+    trigger: koTitle,
+    start: "top 80%",
+  },
+});
+
+koTitleTl
+  .from(split(koTitle)[0], {
+    scale: 0,
+  })
+  .from(split(koTitle)[1], {
+    scale: 0,
+  });
 
 const maTitle = document.querySelector(".ma-title");
 

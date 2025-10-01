@@ -114,6 +114,7 @@ article[data-content="ki"] {
     display: grid;
     place-items: center;
     overflow: hidden;
+    clip-path: circle(0% at 50% 50%);
 
     &:nth-child(1) {
       background: lightgreen;
@@ -250,7 +251,7 @@ article[data-content="ke"] {
   }
 
   .shape {
-    margin-top: 4rem;
+    margin-block-start: 10rem;
     width: min(460px, 100% - 4rem);
     aspect-ratio: 1 / 0.9;
     background: #333;
