@@ -496,6 +496,94 @@ koTitleTl
     scale: 0,
   });
 
+// さむい
+const saTitle = document.querySelector(".js-sa-title");
+gsap.from(saTitle, {
+  scale: 0,
+  ease: "expo.out",
+  scrollTrigger: {
+    trigger: saTitle,
+    start: "top 80%",
+  },
+});
+
+// しげの
+const siItems = document.querySelectorAll(".js-si-items > li");
+siItems.forEach((item) => {
+  gsap.from(item, {
+    clipPath: "inset(0 100% 0 0)",
+    ease: "expo.out",
+    duration: 0.3,
+    scrollTrigger: {
+      trigger: item,
+      start: "top 80%",
+    },
+  });
+});
+
+// せんだい
+const seTitle = document.querySelector(".js-se-title");
+const seCircles = document.querySelectorAll(".js-se-circle");
+const seTitleTl = gsap.timeline({
+  scrollTrigger: {
+    trigger: seTitle,
+    start: "top 80%",
+  },
+});
+
+seTitleTl
+  .from(seTitle, {
+    rotate: 30,
+    scale: 0,
+    duration: 0.2,
+  })
+  .from(
+    seCircles,
+    {
+      scale: 0,
+      duration: 0.3,
+    },
+    "-=0.25"
+  );
+
+// そんなもんね
+const soTitle1 = document.querySelector(".js-so-title1");
+const soTitle2 = document.querySelector(".js-so-title2");
+const soClipCircle = document.querySelector(".js-so-slide");
+
+gsap.to(soClipCircle, {
+  clipPath: "inset(0 0 0 100%)",
+  duration: 0.3,
+  scrollTrigger: {
+    trigger: ".js-so-youtube",
+    start: "top 70%",
+  },
+});
+
+gsap.from(split(soTitle1), {
+  scale: 0,
+  ease: "back.out",
+  stagger: {
+    amount: 0.3,
+  },
+  scrollTrigger: {
+    trigger: soTitle1,
+    start: "top 80%",
+  },
+});
+
+gsap.from(split(soTitle2), {
+  scale: 0,
+  ease: "back.out",
+  stagger: {
+    amount: 0.3,
+  },
+  scrollTrigger: {
+    trigger: soTitle2,
+    start: "top 80%",
+  },
+});
+
 const maTitle = document.querySelector(".ma-title");
 
 function maMotion() {
