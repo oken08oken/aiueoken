@@ -1,5 +1,6 @@
 header {
-  min-height: 100vh;
+  min-height: 100dvh;
+  background: pink;
 }
 
 .site-title {
