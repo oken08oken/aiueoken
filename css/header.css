@@ -21,8 +21,7 @@ nav {
   scale: 0;
 
   position: fixed;
-  /* inset: 50% 0 0 0; */
-  inset: auto 2rem 1rem 2rem;
+  inset: auto 0 1rem 0;
   overflow: hidden;
   border: 2px solid #333;
   border-radius: 24px;
