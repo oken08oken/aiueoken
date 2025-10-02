@@ -545,9 +545,10 @@ gsap.from(".js-so-youtube", {
   ease: "back.out",
   scrollTrigger: {
     trigger: ".js-so-youtube",
-    start: "top center",
+    start: "top 80%",
   },
 });
+
 gsap.from(split(soTitle1), {
   scale: 0,
   ease: "back.out",
