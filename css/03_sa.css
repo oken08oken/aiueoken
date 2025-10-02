@@ -1,6 +1,6 @@
 /* さ */
 article[data-content="sa"] {
-  background: #ddd;
+  background: var(--blue2);
   padding-block: 3rem;
   padding-inline: var(--padding-inline);
   isolation: isolate;
@@ -11,7 +11,7 @@ article[data-content="sa"] {
   }
   h2 {
     span {
-      color: blue;
+      color: var(--blue1);
       font-weight: bold;
       font-size: var(--size-xxxl);
     }
@@ -26,9 +26,9 @@ article[data-content="sa"] {
     rotate: -10deg;
     font-weight: bold;
     user-select: none;
-    color: aquamarine;
     right: 3rem;
     bottom: 3rem;
+    color: #fefefe;
   }
 }
 
@@ -36,6 +36,10 @@ article[data-content="sa"] {
 article[data-content="si"] {
   padding-block: 3rem;
   padding-inline: var(--padding-inline);
+
+  h2 {
+    color: #25a50f;
+  }
 
   .char-si {
     right: 2rem;
@@ -48,7 +52,7 @@ article[data-content="si"] {
   }
 
   .text-si {
-    color: #ddd;
+    color: var(--green2);
     z-index: -1;
   }
 
@@ -61,7 +65,7 @@ article[data-content="si"] {
     container-type: list / inline-size;
     padding-inline: 1.5rem;
     padding-block: 2rem;
-    background: #eee;
+    background: var(--green2);
 
     h3 {
       font-size: var(--size-md);
@@ -168,7 +172,7 @@ article[data-content="se"] {
 
   .zunda {
     font-size: var(--size-lg);
-    background: greenyellow;
+    background: var(--green1);
     width: fit-content;
     padding: 0.25em 0.5em;
     margin-inline-start: 3rem;
@@ -193,7 +197,7 @@ article[data-content="se"] {
     translate: -5% -8%;
     display: block;
     border-radius: inherit;
-    border: 2px solid gold;
+    border: 2px solid #555;
   }
 
   .c2 {
@@ -209,7 +213,7 @@ article[data-content="se"] {
     translate: 5% 3%;
     display: block;
     border-radius: inherit;
-    border: 2px solid gold;
+    border: 2px solid #555;
   }
 
   .char-se {
@@ -282,7 +286,7 @@ article[data-content="so"] {
     left: 0;
     top: 0;
     translate: -35% -30%;
-    background: yellow;
+    background: #ffee58;
   }
 
   .circle-2 {
@@ -290,13 +294,13 @@ article[data-content="so"] {
     right: 0;
     bottom: 0;
     translate: 40% 40%;
-    background: greenyellow;
+    background: #b3e5fc;
   }
 
   .circle-3 {
     width: min(20vw, 300px);
     translate: 40% 40%;
-    background: yellow;
+    background: #e1bee7;
     left: 10%;
     bottom: 30%;
   }
@@ -304,13 +308,12 @@ article[data-content="so"] {
   .circle-4 {
     width: min(15vw, 190px);
     translate: 40% 40%;
-    background: greenyellow;
+    background: #d7ccc8;
     bottom: 12%;
     right: 34%;
   }
 
   .char-so {
-    color: lawngreen;
     width: fit-content;
     margin-inline-start: auto;
     margin-inline-end: 5rem;

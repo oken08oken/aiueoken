@@ -90,10 +90,10 @@ function aiueTextMotion() {
     stagger: {
       amount: 0.4,
     },
-  }).to(
+  }).from(
     split(aiue),
     {
-      color: gsap.utils.wrap(["red", "orange", "blue", "green"]),
+      color: "#333",
       ease: "expo.out",
       stagger: {
         amount: 0.1,

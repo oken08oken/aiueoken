@@ -33,9 +33,10 @@ section[data-gyo="NA"] .layout {
     display: grid;
     place-items: center;
     padding-inline: clamp(1rem, 5cqi, 3rem);
+    background: #9fa8da;
 
     &:nth-child(even) {
-      background: #bbb;
+      background: #c5cae9;
     }
   }
 

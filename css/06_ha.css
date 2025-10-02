@@ -47,23 +47,63 @@ section[data-gyo="HA"] > .content {
 article[data-content="ha"] {
   grid-column: 1 / span 3;
   grid-row: 1;
+
+  h2,
+  p {
+    color: var(--orange1);
+  }
+  .decorative {
+    color: var(--orange2);
+  }
 }
 article[data-content="hi"] {
   grid-column: 3 / span 3;
   grid-row: 2;
+
+  h2,
+  p {
+    color: var(--green1);
+  }
+  .decorative {
+    color: var(--green2);
+  }
 }
 
 article[data-content="hu"] {
   grid-column: 2 / span 3;
   grid-row: 3;
+
+  h2,
+  p {
+    color: var(--pink1);
+  }
+  .decorative {
+    color: var(--pink2);
+  }
 }
 
 article[data-content="he"] {
   grid-column: 1 / span 3;
   grid-row: 4;
+
+  h2,
+  p {
+    color: var(--green1);
+  }
+  .decorative {
+    color: var(--green2);
+  }
 }
 
 article[data-content="ho"] {
   grid-column: 3 / span 3;
   grid-row: 5;
+
+  h2,
+  p {
+    color: var(--blue1);
+  }
+  .decorative {
+    color: var(--blue2);
+  }
 }

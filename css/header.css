@@ -11,6 +11,19 @@ header {
     font-size: clamp(25px, 8vw, 50px);
   }
 
+  .site-a-char {
+    color: var(--pink1);
+  }
+  .site-i-char {
+    color: var(--orange1);
+  }
+  .site-u-char {
+    color: var(--blue1);
+  }
+  .site-e-char {
+    color: var(--green1);
+  }
+
   .oken {
     font-size: clamp(60px, 20vw, 120px);
   }

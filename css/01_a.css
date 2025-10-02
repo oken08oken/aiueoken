@@ -7,7 +7,7 @@
 
   h2 {
     span {
-      background-image: linear-gradient(90deg, red, red);
+      background-image: linear-gradient(90deg, var(--pink1), var(--pink1));
       background-repeat: no-repeat;
       background-size: 0% 100%;
     }
@@ -52,7 +52,7 @@
     padding: 0.75em 1.25em;
     display: grid;
     place-items: center;
-    background: orange;
+    background: var(--pink2);
   }
 }
 
@@ -73,7 +73,7 @@
       scale: 2;
       transform-origin: left;
       translate: 25% -25%;
-      color: orange;
+      color: var(--pink1);
     }
   }
 
@@ -93,14 +93,16 @@
     align-items: baseline;
     gap: clamp(24px, 4cqi, 32px);
     margin-top: 1.5rem;
-    border-bottom: 3px solid orange;
+    border-bottom: 3px solid var(--pink2);
+    color: var(--pink1);
   }
 
   & li::before {
     scale: 2;
     translate: 0 -20%;
     transform: skew(-18deg);
-    color: orange;
+    color: #333;
+    color: var(--pink1);
   }
   & li:nth-child(1)::before {
     content: "1";
@@ -155,7 +157,7 @@ article[data-content="i"] {
 .iwate-item1 {
   container: iwate-item1 / inline-size;
   overflow: hidden;
-  background: #eee;
+  background: var(--blue2);
   isolation: isolate;
 
   & p {
@@ -168,12 +170,13 @@ article[data-content="i"] {
     top: 0;
     translate: 15% -25%;
     rotate: -20deg;
+    color: var(--blue1);
   }
 
   & .circle {
     width: clamp(280px, 50cqi, 450px);
     aspect-ratio: 1 / 1;
-    background: #ddd;
+    background: var(--blue1);
     border-radius: 50%;
     bottom: 0;
     left: 0;
@@ -187,6 +190,7 @@ article[data-content="i"] {
   h3 {
     grid-column: 1 / -1;
     justify-self: center;
+    color: var(--blue1);
   }
 
   ul {
@@ -203,8 +207,9 @@ article[data-content="i"] {
   li {
     padding: 0.75em 1.5em;
     text-align: center;
-    border: 1px dashed #000;
+    border: 1px dashed var(--blue1);
     border-radius: 12px;
+    color: var(--blue1);
   }
 
   & .text-i {
@@ -237,7 +242,7 @@ article[data-content="u"] {
       font-size: 70px;
       color: white;
       text-align: center;
-      background: linear-gradient(orange, orange);
+      background: linear-gradient(tomato, tomato);
       background-repeat: no-repeat;
       background-size: 0% 100%;
     }
@@ -283,7 +288,7 @@ article[data-content="u"] {
         var(--s) 50%
       );
 
-      background: green;
+      background: var(--green1);
       color: white;
       width: fit-content;
       font-size: var(--size-md);
@@ -384,7 +389,7 @@ article[data-content="o"] {
 
     & > :nth-child(1) {
       font-size: var(--size-xl);
-      background: red;
+      background: var(--pink1);
       background-size: 0 100%;
       padding: 0.25em;
     }
@@ -426,7 +431,7 @@ article[data-content="o"] {
 
   & .item {
     container-type: inline-size;
-    background: #ddd;
+    background: #eee;
   }
 
   & .item-content {
@@ -448,7 +453,7 @@ article[data-content="o"] {
   .opening-slide {
     width: 100%;
     aspect-ratio: 16 / 9;
-    background: red;
+    background: var(--pink2);
   }
 
   & iframe {

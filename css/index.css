@@ -18,6 +18,31 @@
   --site-max-width: 1200px;
 
   --padding-inline: clamp(1rem, 5cqi, 3rem);
+
+  /* color */
+
+  --s1: 70;
+  --l1: 55;
+
+  --s2: 80;
+  --l2: 90;
+
+  --pink-h: 330;
+  --blue-h: 210;
+  --orange-h: 20;
+  --green-h: 100;
+
+  --pink1: hsl(var(--pink-h) var(--s1) var(--l1));
+  --pink2: hsl(var(--pink-h) var(--s2) var(--l2));
+
+  --blue1: hsl(var(--blue-h) var(--s1) var(--l1));
+  --blue2: hsl(var(--blue-h) var(--s2) var(--l2));
+
+  --orange1: hsl(var(--orange-h) var(--s1) var(--l1));
+  --orange2: hsl(var(--orange-h) var(--s2) var(--l2));
+
+  --green1: hsl(var(--green-h) var(--s1) var(--l1));
+  --green2: hsl(var(--green-h) var(--s2) var(--l2));
 }
 
 h2 {

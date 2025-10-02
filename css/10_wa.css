@@ -7,7 +7,7 @@ article[data-content="wa"] {
     font-size: var(--size-xl);
 
     span {
-      background: linear-gradient(red, red);
+      background: linear-gradient(var(--pink1), var(--pink1));
       background-repeat: no-repeat;
       background-size: 0 100%;
       display: inline-block;
@@ -78,7 +78,6 @@ article[data-content="wa"] {
 
   .item {
     p {
-      border: 1px solid #000;
       margin-block-start: 2.5rem;
     }
   }

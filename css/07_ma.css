@@ -17,20 +17,28 @@ section[data-gyo="MA"] > .content {
 }
 
 article[data-content="ma"] {
+  h2 {
+    color: #fbc02d;
+  }
   .learn {
     --min: auto;
 
     li {
       font-size: var(--size-md);
-      background: white;
       text-align: center;
-      padding: 0.25em;
-      background: #ddd;
+      padding: 0.5em;
+      background: #fbc02d;
     }
   }
 }
 
 article[data-content="mi"] {
+  h2 {
+    color: #81c784;
+  }
+  p {
+    color: #81c784;
+  }
   .mi-title-content {
     text-align: center;
   }
@@ -54,8 +62,12 @@ article[data-content="mi"] {
 article[data-content="mu"] {
   padding: 3rem;
 
+  h2 {
+    color: #9575cd;
+  }
   p {
     font-size: var(--size-lg);
+    color: #9575cd;
 
     &:nth-of-type(1) {
       place-self: start start;
@@ -107,14 +119,17 @@ article[data-content="me"] {
     width: fit-content;
     margin-inline: auto;
     margin-block-start: 3rem;
-    color: purple;
   }
 }
 
 article[data-content="mo"] {
+  h2 {
+    color: #f9a825;
+  }
   p {
     margin-block-start: 1rem;
     text-align: center;
+    color: #f9a825;
   }
 }
 
