@@ -163,12 +163,6 @@ article[data-content="wn"] {
     margin-block-start: 4rem;
   }
 
-  .thanks {
-    font-size: var(--size-xxl);
-    margin-block-start: 3rem;
-    text-align: center;
-  }
-
   .char {
     text-align: center;
   }

@@ -549,17 +549,15 @@ seTitleTl
 // そんなもんね
 const soTitle1 = document.querySelector(".js-so-title1");
 const soTitle2 = document.querySelector(".js-so-title2");
-const soClipCircle = document.querySelector(".js-so-slide");
 
-gsap.to(soClipCircle, {
-  clipPath: "inset(0 0 0 100%)",
-  duration: 0.3,
+gsap.from(".js-so-youtube", {
+  scale: 0,
+  ease: "back.out",
   scrollTrigger: {
     trigger: ".js-so-youtube",
-    start: "top 70%",
+    start: "top center",
   },
 });
-
 gsap.from(split(soTitle1), {
   scale: 0,
   ease: "back.out",
