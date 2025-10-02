@@ -439,6 +439,10 @@ article[data-content="o"] {
     > p {
       margin-block-start: 1rem;
     }
+
+    a {
+      text-decoration: underline;
+    }
   }
 
   .opening-slide {

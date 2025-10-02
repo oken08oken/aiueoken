@@ -582,6 +582,21 @@ gsap.from(split(soTitle2), {
   },
 });
 
+// た行
+const taGyoArticles = document.querySelectorAll(`[data-gyo="TA"] article`);
+taGyoArticles.forEach((article) => {
+  gsap.from(article, {
+    scale: 0,
+    rotate: -20,
+    duration: 0.3,
+    ease: "expo.out",
+    scrollTrigger: {
+      trigger: article,
+      start: "top 80%",
+    },
+  });
+});
+
 const maTitle = document.querySelector(".ma-title");
 
 function maMotion() {
@@ -752,4 +767,38 @@ ScrollTrigger.create({
   onEnter: () => {
     moMotion();
   },
+});
+
+// や行
+const yaGyoArticles = document.querySelectorAll(`[data-gyo="YA"] article`);
+yaGyoArticles.forEach((article) => {
+  const tl = gsap.timeline({
+    scrollTrigger: {
+      trigger: article,
+    },
+    defaults: {
+      ease: "back.out",
+    },
+  });
+  const title = article.querySelector("h2");
+  const text = article.querySelector("p");
+
+  tl.from(article, {
+    rotate: 160,
+    scale: 0,
+  })
+    .from(
+      title,
+      {
+        scale: 0,
+      },
+      "<0.2"
+    )
+    .from(
+      text,
+      {
+        scale: 0,
+      },
+      "<0.2"
+    );
 });

@@ -1,6 +1,6 @@
 header {
-  min-height: 100lvh;
-  background: lightgreen;
+  height: 100vh;
+  background: palevioletred;
 }
 
 .site-title {
