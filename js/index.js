@@ -346,6 +346,7 @@ const oTitleWord2 = document.querySelector(".o-title-word2");
 const oTitleTl = gsap.timeline({
   scrollTrigger: {
     trigger: oTitle,
+    start: "top 70%",
   },
 });
 
@@ -475,26 +476,15 @@ gsap.from(kShape, {
 // こめ
 const riceTop = document.querySelector(".rice-top");
 const riceBottom = document.querySelector(".rice-bottom");
-
-const koTitle = document.querySelector(".ko-title");
-const koTitleTl = gsap.timeline({
-  defaults: {
-    ease: "expo.out",
-    duration: 0.2,
-  },
+const koTitleWord = document.querySelector(".js-rice-word");
+gsap.from(split(koTitleWord), {
+  scale: 0,
+  ease: "expo.out",
   scrollTrigger: {
-    trigger: koTitle,
+    trigger: ".ko-title",
     start: "top 80%",
   },
 });
-
-koTitleTl
-  .from(split(koTitle)[0], {
-    scale: 0,
-  })
-  .from(split(koTitle)[1], {
-    scale: 0,
-  });
 
 // さむい
 const saTitle = document.querySelector(".js-sa-title");
