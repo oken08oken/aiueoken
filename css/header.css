@@ -102,3 +102,10 @@ nav > .layout {
 .nav-none {
   display: none;
 }
+
+footer {
+  p {
+    text-align: center;
+    padding: 1rem;
+  }
+}
