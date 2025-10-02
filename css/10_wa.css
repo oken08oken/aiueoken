@@ -1,6 +1,5 @@
 /* わ */
 article[data-content="wa"] {
-  border: 1px solid #000;
   padding-block: 3rem;
   padding-inline: clamp(1rem, 5cqi, 3rem);
 
@@ -8,8 +7,9 @@ article[data-content="wa"] {
     font-size: var(--size-xl);
 
     span {
-      background: red;
-      color: white;
+      background: linear-gradient(red, red);
+      background-repeat: no-repeat;
+      background-size: 0 100%;
       display: inline-block;
       padding: 0.25em;
     }
@@ -27,6 +27,7 @@ article[data-content="wa"] {
   .niku {
     text-align: center;
     padding-block: 2rem;
+    font-weight: bold;
   }
   /* HTML: <div class="tooltip">This is a Speech Bubble with a gradient coloration and with border radius </div> */
   .tooltip {

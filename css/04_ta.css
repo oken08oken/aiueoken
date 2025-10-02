@@ -41,7 +41,7 @@ section[data-gyo="TA"] > .content {
 
     display: grid;
     grid-template-columns: min-content 1fr;
-    grid-template-rows: minmax(360px, 360px) auto;
+    grid-template-rows: minmax(390px, 390px) auto;
     gap: 1rem;
     border: var(--border-thin) solid var(--border-color);
   }

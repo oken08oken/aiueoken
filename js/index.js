@@ -792,3 +792,63 @@ yaGyoArticles.forEach((article) => {
       "<0.2"
     );
 });
+
+const waTitle = document.querySelector(".js-wa-title");
+const waTitleWord = document.querySelector(".js-wa-title > span");
+const waTitleTl = gsap.timeline({
+  scrollTrigger: {
+    trigger: waTitle,
+  },
+});
+
+waTitleTl
+  .from(split(waTitle), {
+    scale: 0,
+    ease: "expo.out",
+    stagger: {
+      amount: 0.4,
+    },
+  })
+  .to(
+    waTitleWord,
+    {
+      backgroundSize: "100% 100%",
+      color: "white",
+      ease: "expo.out",
+    },
+    "<0.4"
+  );
+
+const waNiku = document.querySelector(".js-niku");
+gsap.from(waNiku, {
+  scale: 0,
+  ease: "expo.inOut",
+  scrollTrigger: {
+    trigger: waNiku,
+    start: "top 70%",
+  },
+});
+
+const waToolTips = document.querySelectorAll(".tooltip");
+waToolTips.forEach((tooltip) => {
+  gsap.from(tooltip, {
+    scale: 0,
+    rotate: -60,
+    ease: "expo.out",
+    duration: 0.4,
+    scrollTrigger: {
+      trigger: tooltip,
+      start: "top 80%",
+    },
+  });
+});
+
+// を
+gsap.from(".wo-item", {
+  scale: 0,
+  rotate: -60,
+  ease: "expo.out",
+  scrollTrigger: {
+    trigger: ".wo-item",
+  },
+});

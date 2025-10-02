@@ -1,6 +1,5 @@
 header {
-  height: 100svh;
-  background: olive;
+  height: 100vh;
 }
 
 .site-title {
@@ -22,15 +21,16 @@ nav {
   scale: 0;
 
   position: fixed;
-  inset: 50% 0 0 0;
+  /* inset: 50% 0 0 0; */
+  inset: auto 2rem 1rem 2rem;
   overflow: hidden;
   border: 2px solid #333;
+  border-radius: 24px;
 
   @media (600px < width) {
     inset: revert;
     right: 3rem;
     bottom: 3rem;
-    border-radius: 24px;
   }
 
   z-index: 100;
