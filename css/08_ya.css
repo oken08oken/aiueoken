@@ -5,6 +5,7 @@ section[data-gyo="YA"] > .full {
   --min: 340px;
   --gap: 1rem;
   justify-content: center;
+  overflow: hidden;
 
   article {
     background: #eee;
